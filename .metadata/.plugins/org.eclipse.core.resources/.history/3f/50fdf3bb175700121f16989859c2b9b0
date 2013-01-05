@@ -77,7 +77,7 @@ public class MainWindow extends JFrame{
         ));
         sTable.setViewportView(tSongs);
         bPrevious.setText("<<");
-        bPlay.setIcon(new javax.swing.ImageIcon("foto\\play.png")); // NOI18N
+        bPlay.setIcon(new javax.swing.ImageIcon("C:\\Users\\Bego\\Downloads\\play.png")); // NOI18N
         bNext.setText(">>");
         bRecommendation.setText("Open Recommendation");
         bAccount.setText("Account");
