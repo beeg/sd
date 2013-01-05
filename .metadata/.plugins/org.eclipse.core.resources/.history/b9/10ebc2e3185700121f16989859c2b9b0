@@ -1,7 +1,5 @@
 package es.deusto.ingenieria.sd.tralala.player.remote;
 
-import java.rmi.Naming;
-
 public class ServiceLocator {
 	
 	private IUserSession service;
