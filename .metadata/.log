@@ -13,3 +13,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 -data C:\Users\Bego\works
 
 !ENTRY org.eclipse.ui 4 4 2013-01-05 10:30:53.724
 !MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.ant.internal.ui.editor.actions.OpenDeclarationAction@19a0781)} vs {ActionHandler(org.eclipse.ant.internal.ui.editor.actions.OpenDeclarationAction@181c4e0)}
+
+!ENTRY org.eclipse.ui 4 4 2013-01-05 11:27:55.761
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.ant.internal.ui.editor.actions.OpenDeclarationAction@1901c58)} vs {ActionHandler(org.eclipse.ant.internal.ui.editor.actions.OpenDeclarationAction@116e789)}
