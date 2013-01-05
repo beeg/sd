@@ -3,7 +3,6 @@ package es.deusto.ingenieria.sd.tralala.server.rmi;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
-
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
 import es.deusto.ingenieria.sd.tralala.server.data.Member;
@@ -13,7 +12,6 @@ import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 
 public class UserSession extends UnicastRemoteObject implements IUserSession{
-
 
 	private SongService songManager;
 	private UserService userManager;
@@ -27,43 +25,43 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public void sendRecommendation(Member main, Member receiver, Song song) {
 		// TODO Auto-generated method stub
-		
+		userManager.sendRecommendation(main, receiver, song);
 	}
 
 	@Override
 	public void rejectRecommendation(Member main, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		
+		userManager.rejectRecommendation(main, recommendation);
 	}
 
 	@Override
 	public void acceptRecommendation(Member main, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		
+		userManager.acceptRecommendation(main, recommendation);
 	}
 
 	@Override
 	public void getRecommendations(Member main) {
 		// TODO Auto-generated method stub
-		
+		userManager.getRecommendations(main);
 	}
 
 	@Override
 	public void addFriend(Member main, Member friend) {
 		// TODO Auto-generated method stub
-		
+		userManager.addFriend(main, friend);
 	}
 
 	@Override
 	public void removeFriend(Member main, Member friend) {
 		// TODO Auto-generated method stub
-		
+		userManager.removeFriend(main, friend);
 	}
 
 	@Override
 	public void acceptFriend(Member main, Member friend) {
 		// TODO Auto-generated method stub
-		
+		userManager.acceptFriend(main, friend);
 	}
 
 	@Override
@@ -106,7 +104,7 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public List<SongDTO> getSongs() {
 		// TODO Auto-generated method stub
-		userManager.getSongs();
+		songManager.getSongs();
 		return null;
 	}
 
