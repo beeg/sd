@@ -1,0 +1,54 @@
+package es.deusto.ingenieria.sd.tralala.server.data.jdo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.jdo.PersistenceManager;
+import javax.jdo.Query;
+import javax.jdo.Transaction;
+import es.deusto.ingenieria.sd.tralala.server.data.Song;
+
+
+public class SongJDO {
+	private PersistenceManager pm = null;
+	
+	public SongJDO(){
+		pm = DAO.getInstance().connect();
+	}
+	
+	public void store(Song song){
+		Transaction tx = pm.currentTransaction();
+		tx.begin();
+		pm.makePersistent(song);
+		tx.commit();
+	}
+	
+	public void remove(Song song){
+		Transaction tx = pm.currentTransaction();
+		tx.begin();
+		pm.deletePersistent(song);
+		tx.commit();
+	}
+	
+	public Song get(String name){
+		Transaction tx = pm.currentTransaction();
+		tx.begin();
+		Query query = pm.newQuery("SELECT FROM " + Song.class.getName() + " WHERE title == '" + name + "'");
+		query.setUnique(true);
+		Song tempSong = (Song)query.execute();
+		tx.commit();
+		
+		return tempSong;
+	}
+	
+	public List<Song> getSongs(){
+		Transaction tx = pm.currentTransaction();
+		tx.begin();
+		Query query = pm.newQuery(Song.class);
+		@SuppressWarnings("unchecked")
+		List<Song> listSong = (List<Song>) query.execute();
+		tx.commit();
+		
+		return listSong;
+	}
+}
