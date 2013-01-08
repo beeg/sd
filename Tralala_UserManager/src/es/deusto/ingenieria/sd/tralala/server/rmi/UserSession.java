@@ -83,10 +83,9 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public byte[] play(Song song) {
+	public byte[] play(String songTitle) {
 		// TODO Auto-generated method stub
-		return null;
-		
+		return this.songManager.play(songTitle);
 	}
 
 	@Override
@@ -111,49 +110,49 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public void addFavourite(Member main, Song song) {
 		// TODO Auto-generated method stub
+		this.userManager.addFavourite(main, song);
 		
 	}
 
 	@Override
 	public void removeFavourite(Member main, Song song) {
 		// TODO Auto-generated method stub
-		
+		this.userManager.removeFavourite(main, song);
 	}
 
 	@Override
 	public void changePayment() {
 		// TODO Auto-generated method stub
-		
+		this.userManager.changePayment();
 	}
 
 	@Override
 	public void addPayment() {
 		// TODO Auto-generated method stub
-		
+		this.userManager.addPayment();
 	}
 
 	@Override
 	public void changePaymentType() {
 		// TODO Auto-generated method stub
-		
+		this.userManager.changePaymentType();
 	}
 
 	@Override
 	public void getPayments(Member main) {
 		// TODO Auto-generated method stub
-		
+		this.userManager.getPayments(main);
 	}
 
 	@Override
 	public void getCurrentPayment(Member main) {
 		// TODO Auto-generated method stub
-		
+		this.userManager.getCurrentPayment(main);
 	}
 
 	@Override
 	public void logout(Member main) {
 		// TODO Auto-generated method stub
-		
+		this.userManager.logout(main);
 	}
-
 }

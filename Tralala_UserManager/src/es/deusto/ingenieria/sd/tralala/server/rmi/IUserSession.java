@@ -34,7 +34,7 @@ public interface IUserSession extends Remote{
 	public boolean login(String username, String password);
 	
 	//SongDTO to transfer it to the client, which is the reproducer?
-	public byte[] play(Song song);
+	public byte[] play(String song);
 	
 	public List<SongDTO> getFavourites(Member main);
 	

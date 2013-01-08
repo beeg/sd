@@ -21,10 +21,10 @@ public class SongService {
 		return song.getSongs();
 	}
 	
-	public byte[] play(Song song) {
+	public byte[] play(String song) {
 		// TODO Auto-generated method stub
+		Song retSong = this.song.get(song);
 		return null;
-		
 	}
 	
 	public List<SongDTO> getFavourites(Member main) {
