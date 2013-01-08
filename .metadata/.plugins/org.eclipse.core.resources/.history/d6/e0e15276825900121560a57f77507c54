@@ -1,0 +1,26 @@
+package es.deusto.ingenieria.sd.tralala.server.data.dto;
+
+import java.io.Serializable;
+import java.util.Date;
+
+import es.deusto.ingenieria.sd.tralala.server.data.Song;
+
+public class SongDTO implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private String title;
+	private String artist;
+	private String album;
+	private String lyrics;
+	Date releaseDate;
+	int duration;
+	
+	public SongDTO(Song s)	{
+		title=s.getTitle();
+		artist=s.getArtist();
+		album=s.getAlbum();
+		lyrics=s.getLyrics();
+		releaseDate=s.getReleaseDate();
+		duration=s.getDuration();
+	}
+}

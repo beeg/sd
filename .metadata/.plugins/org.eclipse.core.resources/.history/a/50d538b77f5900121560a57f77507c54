@@ -3,6 +3,7 @@ package es.deusto.ingenieria.sd.tralala.server;
 import java.util.List;
 import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO;
 
 public class UserService {

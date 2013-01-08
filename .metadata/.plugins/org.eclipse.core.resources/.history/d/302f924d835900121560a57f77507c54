@@ -55,7 +55,8 @@ public class MemberJDO {
 	public List<Member> getFriends(String username){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
-		Query query = pm.newQuery("SELECT FROM amigos WHERE id1 == '" + getID(username) + "'");
+		Query query = pm.newQuery("SELECT FROM amigos WHERE nick == '" + username + "'");
+		query.setUnique(true);
 		List<Member> tempMem = (List<Member>)query.execute();
 		tx.commit();
 		

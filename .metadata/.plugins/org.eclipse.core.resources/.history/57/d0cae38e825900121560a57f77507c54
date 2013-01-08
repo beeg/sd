@@ -2,6 +2,8 @@ package es.deusto.ingenieria.sd.tralala.server.data.dto;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Song;
 
 public class SongAssembler {

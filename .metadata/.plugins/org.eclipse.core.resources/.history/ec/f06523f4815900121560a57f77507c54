@@ -15,10 +15,11 @@ public class Song {
 	String lyrics;
 	Date releaseDate;
 	int duration;
+	double price;
 	List<Play> plays;
 	
 	public Song(String title, String artist, String album, String lyrics,
-			Date releaseDate, int duration) {
+			Date releaseDate, int duration, double price) {
 		super();
 		this.title = title;
 		this.artist = artist;
@@ -26,6 +27,7 @@ public class Song {
 		this.lyrics = lyrics;
 		this.releaseDate = releaseDate;
 		this.duration = duration;
+		this.price = price;
 		this.plays = new ArrayList<Play>();
 	}
 	
@@ -75,6 +77,14 @@ public class Song {
 	
 	public void setDuration(int duration) {
 		this.duration = duration;
+	}
+	
+	public double getPrice() {
+		return price;
+	}
+	
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	
 	public List<Play> getPlays(){

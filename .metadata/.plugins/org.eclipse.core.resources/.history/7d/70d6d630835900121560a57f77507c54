@@ -41,21 +41,11 @@ public class MemberJDO {
 		return tempMem;
 	}
 	
-	public int getID(String username){
-		Transaction tx = pm.currentTransaction();
-		tx.begin();
-		Query query = pm.newQuery("SELECT idmember FROM " + Member.class.getName() + " WHERE nick == '" + username + "'");
-		query.setUnique(true);
-		int id=(int)query.execute();
-		tx.commit();
-		
-		return id;
-	}
-	
 	public List<Member> getFriends(String username){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
-		Query query = pm.newQuery("SELECT FROM amigos WHERE id1 == '" + getID(username) + "'");
+		Query query = pm.newQuery("SELECT FROM " + Member.class.getName() + " WHERE nick == '" + username + "'");
+		query.setUnique(true);
 		List<Member> tempMem = (List<Member>)query.execute();
 		tx.commit();
 		
