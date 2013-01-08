@@ -6,7 +6,11 @@ import java.util.List;
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
+<<<<<<< HEAD
+import es.deusto.ingenieria.sd.tralala.server.data.Song;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberAssembler;
+=======
+>>>>>>> e842192ef2510baa67fe3d7506383908dc8f1783
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 
