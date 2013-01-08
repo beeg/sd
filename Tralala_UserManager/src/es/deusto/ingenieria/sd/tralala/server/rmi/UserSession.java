@@ -3,7 +3,6 @@ package es.deusto.ingenieria.sd.tralala.server.rmi;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
-
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
 import es.deusto.ingenieria.sd.tralala.server.data.Member;
@@ -13,7 +12,6 @@ import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 
 public class UserSession extends UnicastRemoteObject implements IUserSession{
-
 
 	private SongService songManager;
 	private UserService userManager;
@@ -27,43 +25,43 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public void sendRecommendation(String user, String friend, String songName) {
 		// TODO Auto-generated method stub
-		
+		userManager.sendRecommendation(main, receiver, song);
 	}
 
 	@Override
 	public void rejectRecommendation(String user, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		
+		userManager.rejectRecommendation(main, recommendation);
 	}
 
 	@Override
 	public void acceptRecommendation(String user, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		
+		userManager.acceptRecommendation(main, recommendation);
 	}
 
 	@Override
 	public void getRecommendations(String user) {
 		// TODO Auto-generated method stub
-		
+		userManager.getRecommendations(main);
 	}
 
 	@Override
 	public void addFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		
+		userManager.addFriend(main, friend);
 	}
 
 	@Override
 	public void removeFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		
+		userManager.removeFriend(main, friend);
 	}
 
 	@Override
 	public void acceptFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		
+		userManager.acceptFriend(main, friend);
 	}
 
 	@Override
@@ -104,6 +102,10 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public List<SongDTO> getSongs() {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
+=======
+		songManager.getSongs();
+>>>>>>> 96d46ee32a918e8d61dd8b6339a1ebab168dc9eb
 		return null;
 	}
 
