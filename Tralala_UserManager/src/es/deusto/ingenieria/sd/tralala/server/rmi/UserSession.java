@@ -3,17 +3,16 @@ package es.deusto.ingenieria.sd.tralala.server.rmi;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
-
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
 import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
 import es.deusto.ingenieria.sd.tralala.server.data.Song;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberAssembler;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 
 public class UserSession extends UnicastRemoteObject implements IUserSession{
-
 
 	private SongService songManager;
 	private UserService userManager;
@@ -25,80 +24,78 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public void sendRecommendation(Member main, Member receiver, Song song) {
+	public void sendRecommendation(String user, String friend, String songName) {
 		// TODO Auto-generated method stub
-		
+		//userManager.sendRecommendation(main, receiver, song);
 	}
 
 	@Override
-	public void rejectRecommendation(Member main, Recommendation recommendation) {
+	public void rejectRecommendation(String user, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		
+		//userManager.rejectRecommendation(main, recommendation);
 	}
 
 	@Override
-	public void acceptRecommendation(Member main, Recommendation recommendation) {
+	public void acceptRecommendation(String user, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		
+		//userManager.acceptRecommendation(main, recommendation);
 	}
 
 	@Override
-	public void getRecommendations(Member main) {
+	public void getRecommendations(String user) {
 		// TODO Auto-generated method stub
-		
+		//userManager.getRecommendations(main);
 	}
 
 	@Override
-	public void addFriend(Member main, Member friend) {
+	public void addFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		
+		//userManager.addFriend(main, friend);
 	}
 
 	@Override
-	public void removeFriend(Member main, Member friend) {
+	public void removeFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		
+		//userManager.removeFriend(main, friend);
 	}
 
 	@Override
-	public void acceptFriend(Member main, Member friend) {
+	public void acceptFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		
+		//userManager.acceptFriend(main, friend);
 	}
 
 	@Override
 	public MemberDTO findUser(String username) {
 		// TODO Auto-generated method stub
-		return null;
+		return MemberAssembler.assemble(userManager.findUser(username));
 	}
 
 	@Override
-	public List<MemberDTO> getFriends(Member main) {
+	public List<MemberDTO> getFriends(String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean login(String username, String password) {
-		// TODO Auto-generated method stub
-		return userManager.login(username, password);
+	public MemberDTO login(String username, String password) {		
+		return MemberAssembler.assemble(userManager.login(username, password));
 	}
 
 	@Override
-	public byte[] play(Song song) {
-		// TODO Auto-generated method stub
-		return null;
-		
-	}
-
-	@Override
-	public List<SongDTO> getFavourites(Member main) {
+	public byte[] play(String songname) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<SongDTO> getPermanents(Member main) {
+	public List<SongDTO> getFavourites(String user) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<SongDTO> getPermanents(String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -106,18 +103,17 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public List<SongDTO> getSongs() {
 		// TODO Auto-generated method stub
-		userManager.getSongs();
-		return null;
+		songManager.getSongs();
 	}
 
 	@Override
-	public void addFavourite(Member main, Song song) {
+	public void addFavourite(String user, String song) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void removeFavourite(Member main, Song song) {
+	public void removeFavourite(String user, String song) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -141,21 +137,23 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public void getPayments(Member main) {
+	public void getPayments(String user) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void getCurrentPayment(Member main) {
+	public void getCurrentPayment(String user) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void logout(Member main) {
+	public void logout(String user) {
 		// TODO Auto-generated method stub
 		
 	}
+
+	
 
 }

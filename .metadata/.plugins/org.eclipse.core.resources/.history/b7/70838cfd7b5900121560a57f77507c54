@@ -1,0 +1,24 @@
+package es.deusto.ingenieria.sd.tralala.server.data.dto;
+
+import java.io.Serializable;
+
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
+
+public class MemberDTO implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private Member user;
+	
+	public MemberDTO(Member user)	{
+		this.user=user;
+	}
+
+	public Member getUser() {
+		return user;
+	}
+
+	public void setUser(Member user) {
+		this.user = user;
+	}
+
+}

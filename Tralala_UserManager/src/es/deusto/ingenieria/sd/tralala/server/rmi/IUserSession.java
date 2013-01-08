@@ -13,38 +13,38 @@ public interface IUserSession extends Remote{
 
 	/* How are we sending members through the network? */
 	
-	public void sendRecommendation(Member main, Member receiver, Song song);
+	public void sendRecommendation(String user, String friend, String songName);
 	
-	public void rejectRecommendation(Member main, Recommendation recommendation);
+	public void rejectRecommendation(String user, Recommendation recommendation);
 	
-	public void acceptRecommendation(Member main, Recommendation recommendation);
+	public void acceptRecommendation(String user, Recommendation recommendation);
 	
-	public void getRecommendations(Member main);
+	public void getRecommendations(String user);
 	
-	public void addFriend(Member main, Member friend);
+	public void addFriend(String user, String friend);
 	
-	public void removeFriend(Member main, Member friend);
+	public void removeFriend(String user, String friend);
 	
-	public void acceptFriend(Member main, Member friend);
+	public void acceptFriend(String user, String friend);
 	
 	public MemberDTO findUser(String username);
 	
-	public List<MemberDTO> getFriends(Member main);
+	public List<MemberDTO> getFriends(String user);
 	
-	public boolean login(String username, String password);
+	public MemberDTO login(String username, String password);
 	
 	//SongDTO to transfer it to the client, which is the reproducer?
-	public byte[] play(Song song);
+	public byte[] play(String songname);
 	
-	public List<SongDTO> getFavourites(Member main);
+	public List<SongDTO> getFavourites(String user);
 	
-	public List<SongDTO> getPermanents(Member main);
+	public List<SongDTO> getPermanents(String user);
 	
 	public List<SongDTO> getSongs();
 	
-	public void addFavourite(Member main, Song song);
+	public void addFavourite(String user, String song);
 	
-	public void removeFavourite(Member main, Song song);
+	public void removeFavourite(String user, String song);
 	
 	public void changePayment(/*ADD PAYMENTMETHODDTO HERE*/);
 	
@@ -52,9 +52,9 @@ public interface IUserSession extends Remote{
 	
 	public void changePaymentType();
 	
-	public void /*DTO*/ getPayments(Member main);
+	public void /*DTO*/ getPayments(String user);
 	
-	public void /*DTO*/ getCurrentPayment(Member main/*ADD PAYMENTMETHODDTO HERE*/);
+	public void /*DTO*/ getCurrentPayment(String user/*ADD PAYMENTMETHODDTO HERE*/);
 
-	public void logout(Member main);
+	public void logout(String user);
 }
