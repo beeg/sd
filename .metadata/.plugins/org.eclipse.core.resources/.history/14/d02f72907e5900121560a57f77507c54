@@ -1,7 +1,5 @@
 package es.deusto.ingenieria.sd.tralala.server.data.jdo;
 
-import java.util.List;
-
 import javax.jdo.PersistenceManager;
 import javax.jdo.Transaction;
 import javax.jdo.Query;
@@ -36,17 +34,6 @@ public class MemberJDO {
 		Query query = pm.newQuery("SELECT FROM " + Member.class.getName() + " WHERE nick == '" + username + "'");
 		query.setUnique(true);
 		Member tempMem = (Member)query.execute();
-		tx.commit();
-		
-		return tempMem;
-	}
-	
-	public List<Member> getFriends(String username){
-		Transaction tx = pm.currentTransaction();
-		tx.begin();
-		Query query = pm.newQuery("SELECT FROM " + Member.class.getName() + " WHERE nick == '" + username + "'");
-		query.setUnique(true);
-		List<Member> tempMem = (List<Member>)query.execute();
 		tx.commit();
 		
 		return tempMem;

@@ -58,8 +58,8 @@ public class UserService {
 		return member.get(username);
 	}
 
-	public List<Member> getFriends(String user) {
-		return member.getFriends(user);
+	public List<MemberDTO> getFriends(String user) {
+		return member.;
 	}
 
 	

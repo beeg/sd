@@ -72,7 +72,7 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public List<MemberDTO> getFriends(String user) {
 		// TODO Auto-generated method stub
-		return MemberAssembler.assemble(userManager.getFriends(user));
+		return null;
 	}
 
 	@Override
