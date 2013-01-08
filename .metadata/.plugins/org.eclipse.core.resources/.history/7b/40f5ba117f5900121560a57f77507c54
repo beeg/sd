@@ -41,12 +41,12 @@ public class MemberJDO {
 		return tempMem;
 	}
 	
-	public List<Member> getFriends(String username){
+	public List<Member> get(String username){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
 		Query query = pm.newQuery("SELECT FROM " + Member.class.getName() + " WHERE nick == '" + username + "'");
 		query.setUnique(true);
-		List<Member> tempMem = (List<Member>)query.execute();
+		Member tempMem = (Member)query.execute();
 		tx.commit();
 		
 		return tempMem;
