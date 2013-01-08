@@ -23,45 +23,45 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public void sendRecommendation(Member main, Member receiver, Song song) {
+	public void sendRecommendation(String user, String friend, String songName) {
 		// TODO Auto-generated method stub
-		userManager.sendRecommendation(main, receiver, song);
+		userManager.sendRecommendation(user, friend, songName);
 	}
 
 	@Override
-	public void rejectRecommendation(Member main, Recommendation recommendation) {
+	public void rejectRecommendation(String user, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		userManager.rejectRecommendation(main, recommendation);
+		userManager.rejectRecommendation(user, recommendation);
 	}
 
 	@Override
-	public void acceptRecommendation(Member main, Recommendation recommendation) {
+	public void acceptRecommendation(String user, Recommendation recommendation) {
 		// TODO Auto-generated method stub
-		userManager.acceptRecommendation(main, recommendation);
+		userManager.acceptRecommendation(user, recommendation);
 	}
 
 	@Override
-	public void getRecommendations(Member main) {
+	public void getRecommendations(String user) {
 		// TODO Auto-generated method stub
-		userManager.getRecommendations(main);
+		userManager.getRecommendations(user);
 	}
 
 	@Override
-	public void addFriend(Member main, Member friend) {
+	public void addFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		userManager.addFriend(main, friend);
+		userManager.addFriend(user, friend);
 	}
 
 	@Override
-	public void removeFriend(Member main, Member friend) {
+	public void removeFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		userManager.removeFriend(main, friend);
+		userManager.removeFriend(user, friend);
 	}
 
 	@Override
-	public void acceptFriend(Member main, Member friend) {
+	public void acceptFriend(String user, String friend) {
 		// TODO Auto-generated method stub
-		userManager.acceptFriend(main, friend);
+		userManager.acceptFriend(user, friend);
 	}
 
 	@Override
@@ -71,14 +71,13 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public List<MemberDTO> getFriends(Member main) {
+	public List<MemberDTO> getFriends(String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
 	public boolean login(String username, String password) {
-		// TODO Auto-generated method stub
 		return userManager.login(username, password);
 	}
 
@@ -89,13 +88,13 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public List<SongDTO> getFavourites(Member main) {
+	public List<SongDTO> getFavourites(String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<SongDTO> getPermanents(Member main) {
+	public List<SongDTO> getPermanents(String user) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -108,16 +107,16 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public void addFavourite(Member main, Song song) {
+	public void addFavourite(String user, String song) {
 		// TODO Auto-generated method stub
-		this.userManager.addFavourite(main, song);
+		this.userManager.addFavourite(user, song);
 		
 	}
 
 	@Override
-	public void removeFavourite(Member main, Song song) {
+	public void removeFavourite(String user, String song) {
 		// TODO Auto-generated method stub
-		this.userManager.removeFavourite(main, song);
+		this.userManager.removeFavourite(user, song);
 	}
 
 	@Override
@@ -139,20 +138,20 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public void getPayments(Member main) {
+	public void getPayments(String user) {
 		// TODO Auto-generated method stub
-		this.userManager.getPayments(main);
+		this.userManager.getPayments(user);
 	}
 
 	@Override
-	public void getCurrentPayment(Member main) {
+	public void getCurrentPayment(String user) {
 		// TODO Auto-generated method stub
-		this.userManager.getCurrentPayment(main);
+		this.userManager.getCurrentPayment(user);
 	}
 
 	@Override
-	public void logout(Member main) {
+	public void logout(String user) {
 		// TODO Auto-generated method stub
-		this.userManager.logout(main);
+		this.userManager.logout(user);
 	}
 }
