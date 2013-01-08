@@ -90,13 +90,13 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	@Override
 	public List<SongDTO> getFavourites(String user) {
 		// TODO Auto-generated method stub
-		return SongAssembler.assemble(songManager.getFavourites(user));
+		return null;
 	}
 
 	@Override
 	public List<SongDTO> getPermanents(String user) {
 		// TODO Auto-generated method stub
-		return SongAssembler.assemble(songManager.getPermanents(user));
+		return null;
 	}
 
 	@Override

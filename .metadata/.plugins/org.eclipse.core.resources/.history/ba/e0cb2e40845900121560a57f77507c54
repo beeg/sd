@@ -25,9 +25,9 @@ public class SongService {
 		return null;
 	}
 	
-	public List<Song> getFavourites(String username) {
+	public List<SongDTO> getFavourites(String username) {
 		// TODO Auto-generated method stub
-		return song.getFavouriteSongs(username);
+		return null;
 	}
 
 	public List<Song> getPermanents(String username) {
