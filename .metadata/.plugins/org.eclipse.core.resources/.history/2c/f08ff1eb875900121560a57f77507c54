@@ -18,15 +18,11 @@
             <field name="points">
                 <column jdbc-type="INT"/>
             </field>
-            <field name="permanentCollection" mapped-by="member">
+            <field name="permanents" mapped-by="member">
             	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
                 <join/>
             </field>
-            <field name="favourites" mapped-by="member">
-            	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
-                <join/>
-            </field>
-            <field name="friends" mapped-by="member">
+            <field name="favorites" mapped-by="member">
             	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
                 <join/>
             </field>
