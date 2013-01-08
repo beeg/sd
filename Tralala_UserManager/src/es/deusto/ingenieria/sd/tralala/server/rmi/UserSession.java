@@ -5,9 +5,7 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
-import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
-import es.deusto.ingenieria.sd.tralala.server.data.Song;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 

@@ -1,8 +1,6 @@
 package es.deusto.ingenieria.sd.tralala.server;
 
 import java.util.List;
-
-import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Song;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.jdo.SongJDO;
@@ -27,12 +25,12 @@ public class SongService {
 		return null;
 	}
 	
-	public List<SongDTO> getFavourites(Member main) {
+	public List<SongDTO> getFavourites(String songName) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public List<SongDTO> getPermanents(Member main) {
+	public List<SongDTO> getPermanents(String songName) {
 		// TODO Auto-generated method stub
 		return null;
 	}

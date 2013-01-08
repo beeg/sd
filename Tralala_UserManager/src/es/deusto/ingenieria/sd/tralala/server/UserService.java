@@ -3,7 +3,6 @@ package es.deusto.ingenieria.sd.tralala.server;
 import java.util.List;
 import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
-import es.deusto.ingenieria.sd.tralala.server.data.Song;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO;
 
@@ -27,31 +26,31 @@ public class UserService {
 		}
 	}
 	
-	public void sendRecommendation(Member main, Member receiver, Song song) {
+	public void sendRecommendation(String user, String receiver, String songName) {
 		
 	}
 	
-	public void rejectRecommendation(Member main, Recommendation recommendation) {
+	public void rejectRecommendation(String user, Recommendation recommendation) {
 		
 	}
 	
-	public void acceptRecommendation(Member main, Recommendation recommendation) {
+	public void acceptRecommendation(String user, Recommendation recommendation) {
 		
 	}
 	
-	public void getRecommendations(Member main) {
+	public void getRecommendations(String user) {
 
 	}
 	
-	public void addFriend(Member main, Member friend) {
+	public void addFriend(String user, String friend) {
 
 	}
 
-	public void removeFriend(Member main, Member friend) {
+	public void removeFriend(String user, String friend) {
 
 	}
 
-	public void acceptFriend(Member main, Member friend) {
+	public void acceptFriend(String user, String friend) {
 
 	}
 	
@@ -59,17 +58,17 @@ public class UserService {
 		return null;
 	}
 
-	public List<MemberDTO> getFriends(Member main) {
+	public List<MemberDTO> getFriends(String user) {
 		return null;
 	}
 
 	
-	public void addFavourite(Member main, Song song) {
+	public void addFavourite(String user, String songName) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void removeFavourite(Member main, Song song) {
+	public void removeFavourite(String user, String songName) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -89,17 +88,17 @@ public class UserService {
 		
 	}
 
-	public void getPayments(Member main) {
+	public void getPayments(String user) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void getCurrentPayment(Member main) {
+	public void getCurrentPayment(String user) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	public void logout(Member main) {
+	public void logout(String user) {
 		// TODO Auto-generated method stub
 		
 	}
