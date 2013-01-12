@@ -1,12 +1,15 @@
 package es.deusto.ingenieria.sd.tralala.server.data.jdo;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 import java.util.List;
 
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
+
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Song;
 
 
@@ -42,36 +45,14 @@ public class SongJDO {
 		return tempSong;
 	}
 	
-	public List<Song> getFavouriteSongs(String username){
-		Transaction tx = pm.currentTransaction();
-		tx.begin();
-		Query query = pm.newQuery("SELECT FROM favoritesongs WHERE nick == '" + username + "'");
-		@SuppressWarnings("unchecked")
-		List<Song> listSong = (List<Song>) query.execute();
-		tx.commit();
-		
-		return listSong;
-	}
-	
-	public List<Song> getPermanentSongs(String username){
-		Transaction tx = pm.currentTransaction();
-		tx.begin();
-		Query query = pm.newQuery("SELECT FROM permanentsong WHERE nick == '" + username + "'");
-		@SuppressWarnings("unchecked")
-		List<Song> listSong = (List<Song>) query.execute();
-		tx.commit();
-		
-		return listSong;
-	}
-	
 	public List<Song> getSongs(){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
 		Query query = pm.newQuery("SELECT FROM " + Song.class.getName());
 		@SuppressWarnings("unchecked")
-		List<Song> listSong = (List<Song>) query.execute();
+		List<Song> listSongs = (List<Song>) query.execute();
 		tx.commit();
 		
-		return listSong;
+		return listSongs;
 	}
 }

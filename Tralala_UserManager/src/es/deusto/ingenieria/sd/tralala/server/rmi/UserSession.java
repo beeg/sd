@@ -1,8 +1,12 @@
 package es.deusto.ingenieria.sd.tralala.server.rmi;
 
+import java.io.IOException;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
+
+import javax.sound.sampled.UnsupportedAudioFileException;
+
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
@@ -10,6 +14,7 @@ import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberAssembler;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongAssembler;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.SongFileDTO;
 
 public class UserSession extends UnicastRemoteObject implements IUserSession{
 
@@ -19,137 +24,141 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 
 	public UserSession() throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		userManager = new UserService();
+		songManager = new SongService();
 	}
 
 	@Override
-	public void sendRecommendation(String user, String friend, String songName) {
+	public void sendRecommendation(String user, String friend, String songName) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.sendRecommendation(main, receiver, song);
 	}
 
 	@Override
-	public void rejectRecommendation(String user, Recommendation recommendation) {
+	public void rejectRecommendation(String user, Recommendation recommendation) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.rejectRecommendation(main, recommendation);
 	}
 
 	@Override
-	public void acceptRecommendation(String user, Recommendation recommendation) {
+	public void acceptRecommendation(String user, Recommendation recommendation) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.acceptRecommendation(main, recommendation);
 	}
 	
 	@Override
-	public void getRecommendations(String user) {
+	public void getRecommendations(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.getRecommendations(main);
 	}
 
 	@Override
-	public void addFriend(String user, String friend) {
+	public void addFriend(String user, String friend) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.addFriend(main, friend);
 	}
 
 	@Override
-	public void removeFriend(String user, String friend) {
+	public void removeFriend(String user, String friend) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.removeFriend(main, friend);
 	}
 
 	@Override
-	public void acceptFriend(String user, String friend) {
+	public void acceptFriend(String user, String friend) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.acceptFriend(main, friend);
 	}
 
 	@Override
-	public MemberDTO findUser(String username) {
+	public MemberDTO findUser(String username) throws RemoteException{
 		// TODO Auto-generated method stub
 		return MemberAssembler.assemble(userManager.findUser(username));
 	}
 
 	@Override
-	public List<MemberDTO> getFriends(String user) {
+	public List<MemberDTO> getFriends(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		return MemberAssembler.assemble(userManager.getFriends(user));
 	}
 
 	@Override
-	public MemberDTO login(String username, String password) {		
+	public MemberDTO login(String username, String password) throws RemoteException{		
 		return MemberAssembler.assemble(userManager.login(username, password));
 	}
 
 	@Override
-	public byte[] play(String songTitle) {
-		// TODO Auto-generated method stub
-		return this.songManager.play(songTitle);
+	public SongFileDTO play(String songTitle) throws RemoteException{
+		try {
+			return SongAssembler.assembleFile(this.songManager.play(songTitle));
+		} catch (UnsupportedAudioFileException | IOException e) {
+			return null;
+		}
 	}
 
 	@Override
-	public List<SongDTO> getFavourites(String user) {
+	public List<SongDTO> getFavourites(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		return SongAssembler.assemble(songManager.getFavourites(user));
 	}
 
 	@Override
-	public List<SongDTO> getPermanents(String user) {
+	public List<SongDTO> getPermanents(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		return SongAssembler.assemble(songManager.getPermanents(user));
 	}
 
 	@Override
-	public List<SongDTO> getSongs() {
+	public List<SongDTO> getSongs() throws RemoteException{
 		// TODO Auto-generated method stub
 		return SongAssembler.assemble(songManager.getSongs());
 	}
 
 	@Override
-	public void addFavourite(String user, String song) {
+	public void addFavourite(String user, String song) throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.addFavourite(user, song);
 		
 	}
 
 	@Override
-	public void removeFavourite(String user, String song) {
+	public void removeFavourite(String user, String song) throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.removeFavourite(user, song);
 	}
 
 	@Override
-	public void changePayment() {
+	public void changePayment() throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.changePayment();
 	}
 
 	@Override
-	public void addPayment() {
+	public void addPayment() throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.addPayment();
 	}
 
 	@Override
-	public void changePaymentType() {
+	public void changePaymentType() throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.changePaymentType();
 	}
 
 	@Override
-	public void getPayments(String user) {
+	public void getPayments(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.getPayments(user);
 	}
 
 	@Override
-	public void getCurrentPayment(String user) {
+	public void getCurrentPayment(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.getCurrentPayment(user);
 	}
 
 	@Override
-	public void logout(String user) {
+	public void logout(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.logout(user);
 	}

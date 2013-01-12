@@ -20,7 +20,7 @@ public class MemberAssembler {
 	}
 	
 	public static MemberDTO assemble(Member m) {
-
+		System.out.println("Member: "+m);
 		System.out.println("* Assembling member ...");
 		
 		return new MemberDTO(m);

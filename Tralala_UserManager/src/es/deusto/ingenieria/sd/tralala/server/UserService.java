@@ -1,9 +1,11 @@
 package es.deusto.ingenieria.sd.tralala.server;
 
 import java.util.List;
+
 import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
 import es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO;
+
 
 public class UserService {
 	
@@ -18,7 +20,7 @@ public class UserService {
 		
 		if(tempMem == null){
 			return null;
-		} else if(!tempMem.getPass().equals(password)){
+		} else if(!tempMem.getPassword().equals(password)){
 			return null;
 		}else{
 			return tempMem;
@@ -58,7 +60,8 @@ public class UserService {
 	}
 
 	public List<Member> getFriends(String user) {
-		return member.getFriends(user);
+		//return member.getFriends(user);
+		return null;
 	}
 
 	

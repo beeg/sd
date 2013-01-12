@@ -5,9 +5,8 @@ import java.util.List;
 import javax.jdo.PersistenceManager;
 import javax.jdo.Transaction;
 import javax.jdo.Query;
-import es.deusto.ingenieria.sd.tralala.server.data.Member;
-import es.deusto.ingenieria.sd.tralala.server.data.Song;
 
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
 
 public class MemberJDO {
 	private PersistenceManager pm = null;
@@ -23,42 +22,31 @@ public class MemberJDO {
 		tx.commit();
 	}
 	
-	public void remove(Song song){
+	public void remove(Member m){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
-		pm.deletePersistent(song);
+		pm.deletePersistent(m);
 		tx.commit();
 	}
 	
 	public Member get(String username){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
-		Query query = pm.newQuery("SELECT FROM " + Member.class.getName() + " WHERE nick == '" + username + "'");
+		Query query = pm.newQuery("SELECT FROM " + Member.class.getName() + " WHERE login == '" + username + "'");
 		query.setUnique(true);
 		Member tempMem = (Member)query.execute();
 		tx.commit();
-		
 		return tempMem;
 	}
 	
-	public int getID(String username){
+	public List<Member> getMembers(){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
-		Query query = pm.newQuery("SELECT idmember FROM " + Member.class.getName() + " WHERE nick == '" + username + "'");
-		query.setUnique(true);
-		int id=(int)query.execute();
+		Query query = pm.newQuery("SELECT FROM " + Member.class.getName());
+		@SuppressWarnings("unchecked")
+		List<Member> listMembers = (List<Member>) query.execute();
 		tx.commit();
 		
-		return id;
-	}
-	
-	public List<Member> getFriends(String username){
-		Transaction tx = pm.currentTransaction();
-		tx.begin();
-		Query query = pm.newQuery("SELECT FROM amigos WHERE id1 == '" + getID(username) + "'");
-		List<Member> tempMem = (List<Member>)query.execute();
-		tx.commit();
-		
-		return tempMem;
+		return listMembers;
 	}
 }

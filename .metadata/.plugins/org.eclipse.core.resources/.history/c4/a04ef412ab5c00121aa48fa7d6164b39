@@ -1,0 +1,320 @@
+package es.deusto.ingenieria.sd.tralala.player.gui;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.table.DefaultTableModel;
+
+import es.deusto.ingenieria.sd.tralala.player.controller.PlayerController;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
+
+public class MainWindow extends JFrame implements ActionListener{
+
+	PlayerController controller;
+    private JButton bAccount;
+    private JButton bAdd;
+    private JButton bNext;
+    private JButton bPlay;
+    private JButton bPrevious;
+    private JButton bRecommendation;
+    private JButton bRemove;
+    private JButton bSearch;
+    private JButton bShowFavourites;
+    private JButton bShowPermanent;
+    private JLabel lFriends;
+    private JList<MemberDTO> listFriends;
+    private JScrollPane sList;
+    private JScrollPane sTable;
+    private JTextField tAlbum;
+    private JTextField tAuthor;
+    private JTextField tSongName;
+    private JTable tSongs;
+	private JButton bLogin;
+    private JTextField tNick;
+    private JTextField tPassword;
+    private JLabel lnick;
+    private JLabel lpassword;
+    private DefaultListModel<MemberDTO> lmFriends;
+    private JTextArea taLyrics;
+    private DefaultTableModel tmSongs;
+    
+	public MainWindow(PlayerController controller)	{
+		this.controller = controller;
+		changeToLogin();
+		setVisible(true);
+	}
+	
+	public void changeToMain(){
+		tSongName = new JTextField();
+        tAuthor = new JTextField();
+        tAlbum = new JTextField();
+        bSearch = new JButton();
+        bSearch.addActionListener(this);
+        bShowFavourites = new JButton();
+        bShowFavourites.addActionListener(this);
+        bShowPermanent = new JButton();
+        bShowPermanent.addActionListener(this);
+        sList = new JScrollPane();
+        listFriends = new JList<MemberDTO>();
+        lmFriends = new DefaultListModel<MemberDTO>();
+        lFriends = new JLabel();
+        bAdd = new JButton();
+        bRemove = new JButton();
+        sTable = new JScrollPane();
+        tSongs = new JTable();
+        bPrevious = new JButton();
+        bPlay = new JButton();
+        bPlay.addActionListener(this);
+        bNext = new JButton();
+        bRecommendation = new JButton();
+        bAccount = new JButton();
+        tmSongs = new DefaultTableModel(new String[]{"Name","Artist","Album","Duration"}, 0);
+        
+        /* NEED TO REMOVE FROM OBSERVABLE */
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+        tSongName.setText("SongName");
+        tAuthor.setText("Author");
+        tAlbum.setText("Album");
+        bSearch.setText("Search");
+        bShowFavourites.setText("Show Favourites");
+        bShowPermanent.setText("Show Permanent List");
+
+        listFriends.setModel(lmFriends);
+        sList.setViewportView(listFriends);
+        lFriends.setText("Friends");
+        bAdd.setText("Add");
+        bRemove.setText("Remove");
+        tSongs.setModel(tmSongs);
+        sTable.setViewportView(tSongs);
+        bPrevious.setText("<<");
+        bPlay.setIcon(new javax.swing.ImageIcon("foto\\play.png")); // NOI18N
+        bNext.setText(">>");
+        bRecommendation.setText("Open Recommendation");
+        bAccount.setText("Account");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tSongName, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(tAuthor)
+                            .addComponent(tAlbum))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(bSearch)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bShowFavourites)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(bShowPermanent)
+                                .addGap(18, 18, 18)
+                                .addComponent(lFriends)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(bAccount))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(sTable)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(sList, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(bRecommendation)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(bAdd)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(bRemove)))))))
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(131, 131, 131)
+                .addComponent(bPrevious)
+                .addGap(37, 37, 37)
+                .addComponent(bPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(bNext)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tSongName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bAccount))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tAuthor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tAlbum, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bSearch)
+                            .addComponent(bShowFavourites)
+                            .addComponent(bShowPermanent)))
+                    .addComponent(lFriends, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(sList, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(bAdd)
+                                    .addComponent(bRemove)))
+                            .addComponent(sTable, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(bPrevious))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(17, 17, 17)
+                                .addComponent(bNext))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(bPlay))))
+                    .addComponent(bRecommendation, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        
+        pack();
+		setLocationRelativeTo(null);
+	}
+	
+	public void changeToLogin(){
+		tNick = new JTextField();
+        tPassword = new JTextField();
+        lnick = new JLabel();
+        lpassword = new JLabel();
+        bLogin = new JButton();
+        bLogin.addActionListener(this);
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        
+        lnick.setText("Nick :");
+        lpassword.setText("Password :");
+        bLogin.setText("Login");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lnick)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tNick, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(lpassword)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bLogin)
+                            .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGap(34, 34, 34))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tNick, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lnick))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lpassword))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                .addComponent(bLogin)
+                .addContainerGap())
+        );
+
+        pack();
+		setLocationRelativeTo(null);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		Object source = arg0.getSource();
+		if(source == bLogin){
+			try{
+				if(controller.login(tNick.getText(), tPassword.getText())){
+					changeToMain();
+					/*for(MemberDTO member: controller.getFriends()){
+						lmFriends.addElement(member);
+					}*/
+				} else {
+					JOptionPane.showMessageDialog(this, "Sorry your password is not correct.");
+				}
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+		} else if(source == bSearch){
+			try{
+				tmSongs = new DefaultTableModel(SongDTO.getFieldNames(), 0);
+				for(SongDTO song: controller.getSongs()){
+					tmSongs.addRow(song.getFields());
+				}
+				sTable = new JScrollPane(tSongs);
+				tSongs.setModel(tmSongs);
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+		} else if(source == bShowFavourites){
+			try{
+				tmSongs = new DefaultTableModel(SongDTO.getFieldNames(), 0);
+				for(SongDTO song: controller.getFavourites()){
+					tmSongs.addRow(song.getFields());
+				}
+				sTable = new JScrollPane(tSongs);
+				tSongs.setModel(tmSongs);
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+		} else if(source == bShowPermanent){
+			try{
+				tmSongs = new DefaultTableModel(SongDTO.getFieldNames(), 0);
+				for(SongDTO song: controller.getPermanents()){
+					tmSongs.addRow(song.getFields());
+				}
+				sTable = new JScrollPane(tSongs);
+				tSongs.setModel(tmSongs);
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+		} else if(source == bPlay){
+			try{
+				String lyrics = controller.play(tmSongs.getValueAt(tSongs.getSelectedRow(), 1).toString());
+				taLyrics = new JTextArea(lyrics);
+				sTable = new JScrollPane(taLyrics);
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+	
+
+
+
+}

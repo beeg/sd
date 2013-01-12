@@ -3,7 +3,7 @@
 <orm>
     <package name="es.deusto.ingenieria.sd.tralala.server.data">
         <class name="Member">
-            <field name="nick">
+            <field name="login">
                 <column length="32" jdbc-type="VARCHAR"/>
             </field>
 			<field name="password">
@@ -12,44 +12,54 @@
             <field name="email">
                 <column length="32" jdbc-type="VARCHAR"/>
             </field>
-            <field name="description">
+            <field name="descript">
                 <column length="32" jdbc-type="VARCHAR"/>
             </field>
-            <field name="points">
-                <column jdbc-type="INT"/>
+            <field name="points" persistence-modifier="persistent"> 
+                <column jdbc-type="INT"/> 
+			</field> 
+            <field name="contacts">
+            	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Member" dependent-element="true"/>
+                <join/>
             </field>
-            <field name="permanentCollection" mapped-by="member">
+            <field name="favorites" >
             	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
                 <join/>
             </field>
-            <field name="favourites" mapped-by="member">
-            	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
-                <join/>
-            </field>
-            <field name="friends" mapped-by="member">
+            <field name="permanents" >
             	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
                 <join/>
             </field>
         </class>
         <class name="Song">
-        	<field name="title">
-        		<column length="32" jdbc-type="VARCHAR"/>
-        	</field>
-        	<field name="artist">
-        		<column length="32" jdbc-type="VARCHAR"/>
-        	</field>
-        	<field name="duration">
-                <column jdbc-type="INT"/>
+			<field name="title">
+                <column length="32" jdbc-type="VARCHAR"/>
             </field>
-            <field name="releaseDate">
-                <column jdbc-type="DATE"/>
+			<field name="artist">
+                <column length="32" jdbc-type="VARCHAR"/>
             </field>
-            <field name="lyrics">
-        		<column length="32" jdbc-type="VARCHAR"/>
-        	</field>
-        	<field name="album">
-        		<column length="32" jdbc-type="VARCHAR"/>
-        	</field>
-  		</class>        	
+            <field name="duration" persistence-modifier="persistent"> 
+                <column jdbc-type="INT"/> 
+			</field> 
+			<field name="releaseDate" persistence-modifier="persistent"> 
+                <column jdbc-type="BIGINT"/> 
+			</field> 
+			<field name="lyrics">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="album">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+            <field name="path">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+  		</class>       
+  		 <class name="Play">
+  			<field name="member" persistence-modifier="persistent"></field>
+  			<field name="song" persistence-modifier="persistent"></field>
+            <field name="date" persistence-modifier="persistent"> 
+                <column jdbc-type="DATE"/> 
+			</field> 
+  		</class>  	
     </package>
 </orm>

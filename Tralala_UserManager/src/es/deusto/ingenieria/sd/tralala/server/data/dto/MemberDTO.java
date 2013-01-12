@@ -7,18 +7,22 @@ import es.deusto.ingenieria.sd.tralala.server.data.Member;
 public class MemberDTO implements Serializable{
 
 	private static final long serialVersionUID = 1L;
-	private String user;
+	private String name;
 	
 	public MemberDTO(Member user)	{
-		this.user=user.getNick();
+		this.name=user.getLogin();
 	}
 
 	public String getUser() {
-		return user;
+		return name;
 	}
 
 	public void setUser(String user) {
-		this.user = user;
+		this.name = user;
+	}
+	
+	public String toString(){
+		return name;
 	}
 
 

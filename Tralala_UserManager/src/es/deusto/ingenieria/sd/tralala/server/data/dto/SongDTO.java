@@ -1,6 +1,7 @@
 package es.deusto.ingenieria.sd.tralala.server.data.dto;
 
 import java.io.Serializable;
+import java.lang.reflect.Field;
 import java.util.Date;
 
 import es.deusto.ingenieria.sd.tralala.server.data.Song;
@@ -12,14 +13,13 @@ public class SongDTO implements Serializable{
 	private String artist;
 	private String album;
 	private String lyrics;
-	Date releaseDate;
+	long releaseDate;
 	int duration;
 	
 	public SongDTO(Song s)	{
 		title=s.getTitle();
 		artist=s.getArtist();
 		album=s.getAlbum();
-		lyrics=s.getLyrics();
 		releaseDate=s.getReleaseDate();
 		duration=s.getDuration();
 	}
@@ -48,19 +48,11 @@ public class SongDTO implements Serializable{
 		this.album = album;
 	}
 
-	public String getLyrics() {
-		return lyrics;
-	}
-
-	public void setLyrics(String lyrics) {
-		this.lyrics = lyrics;
-	}
-
-	public Date getReleaseDate() {
+	public long getReleaseDate() {
 		return releaseDate;
 	}
 
-	public void setReleaseDate(Date releaseDate) {
+	public void setReleaseDate(long releaseDate) {
 		this.releaseDate = releaseDate;
 	}
 
@@ -70,6 +62,18 @@ public class SongDTO implements Serializable{
 
 	public void setDuration(int duration) {
 		this.duration = duration;
+	}
+	
+	public String toString(){
+		return title;
+	}
+	
+	public Object[] getFields(){
+		return new Object[]{this, artist, album, releaseDate, duration};
+	}
+	
+	public static String[] getFieldNames(){
+		return new String[]{"Title", "Artist", "album", "Release date", "Duration"};
 	}
 	
 }

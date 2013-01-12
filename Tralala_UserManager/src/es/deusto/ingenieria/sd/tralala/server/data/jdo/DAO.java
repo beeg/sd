@@ -4,6 +4,9 @@ import javax.jdo.JDOHelper;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
+import es.deusto.ingenieria.sd.tralala.server.data.Song;
+
 public class DAO {
 	private static DAO daoMan = new DAO();
 	private PersistenceManager pm = null;
@@ -28,4 +31,18 @@ public class DAO {
 		}
 		return pm;
 	}
+	public static void main(String[]args){
+		/*
+		Member rezo=new Member();
+		rezo.getFavorites().add(new Song("a","a",1,1,"b","b","b"));
+		new MemberJDO().store(rezo);
+		System.out.println(new MemberJDO().getMembers().size());^
+		*/
+		System.out.println("Antes");
+		Member a=new MemberJDO().get("admin");
+		System.out.println("Medio"+a.getLogin());
+		Member b=new MemberJDO().get("admin");
+		System.out.println("Ultimo"+b.getLogin());
+	}
+
 }
