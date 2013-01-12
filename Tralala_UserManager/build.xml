@@ -35,7 +35,7 @@
 	<target name="export" depends="build" description="Export the project into a .jar file">
 		<delete dir="${dist.dir}"/>
 		<mkdir dir="${dist.dir}"/>
-		<jar destfile="${dist.dir}/${export.file}" basedir="${bin.dir}" includes="**/IUserSession.class, **/SongDTO.class, **/SongFileDTO.class, **/MemberDTO.class, **/Recommendation.class"/>
+		<jar destfile="${dist.dir}/${export.file}" basedir="${bin.dir}" includes="**/IUserSession.class, **/SongDTO.class, **/SongFileDTO.class, **/MemberDTO.class, **/Recommendation.class **/SerializableAudioFormat.class, **/SerializableAudioFormat$SerializableEncoding.class"/>
     </target>	
     
 	<target name="server" description="Runs the Server">

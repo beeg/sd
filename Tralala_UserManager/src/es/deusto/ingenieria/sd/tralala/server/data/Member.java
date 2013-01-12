@@ -31,9 +31,12 @@ public class Member {
 		super();
 		this.login = login;
 		this.password = password;
+		contacts = new ArrayList<Member>();
+		favorites=new ArrayList<Song>();
+		permanents=new ArrayList<Song>();
 	}
 
-	public Member(String login, String password,String email, String descript,int points, List<Member> contacts, List<Song>favorites, List<Song>permaments) {
+	public Member(String login, String password,String email, String descript,int points, List<Member> contacts, List<Song>favorites, List<Song>permanents) {
 		super();
 		this.login = login;
 		this.password = password;

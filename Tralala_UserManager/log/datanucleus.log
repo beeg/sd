@@ -895,3 +895,634 @@ Caused by: java.net.ConnectException: Connection refused: connect
 16:25:52,399 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
 16:25:52,399 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1884f64
 16:25:52,399 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+17:50:00,590 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+17:50:01,223 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+17:50:01,871 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+17:50:01,889 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+17:50:01,904 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+17:50:01,905 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=549 ms, enhance=130 ms, total=679 ms. Consult the log for full details
+17:50:08,627 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+17:50:08,636 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+17:50:09,132 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@63e5414a
+17:50:09,132 (main) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Member" since the connection used is closing
+17:50:09,184 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2df7afcf
+17:50:09,184 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@63e5414a
+17:50:09,184 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2df7afcf
+17:50:09,653 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2df7afcf
+17:52:01,980 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+17:52:02,423 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+17:52:03,052 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+17:52:03,064 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+17:52:03,089 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+17:52:03,091 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=526 ms, enhance=139 ms, total=665 ms. Consult the log for full details
+17:52:12,082 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+17:52:12,091 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+17:52:12,517 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@112be51c
+17:52:12,517 (main) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Member" since the connection used is closing
+17:52:12,569 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:12,569 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@112be51c
+17:52:12,569 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:12,845 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:13,035 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:13,037 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:13,037 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:13,044 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@4d574915
+17:52:13,045 (main) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Member" since the connection used is closing
+17:52:13,048 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:13,048 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@4d574915
+17:52:13,048 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7d380be8
+17:52:35,006 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+17:52:35,015 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+17:52:35,522 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@4085f7ff
+17:52:35,523 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:52:35,523 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@4085f7ff
+17:52:35,523 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:52:35,643 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@2be5d5c1
+17:52:35,644 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:52:35,650 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:52:35,650 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@2be5d5c1
+17:52:35,650 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:54:01,362 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@b14f3c
+17:54:01,363 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:54:01,363 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@b14f3c
+17:54:01,363 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:54:01,463 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@28a6683d
+17:54:01,463 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:54:01,467 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:54:01,468 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@28a6683d
+17:54:01,468 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:11,257 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@5d5155f0
+17:55:11,257 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:11,257 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@5d5155f0
+17:55:11,257 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:11,367 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@29bb22a0
+17:55:11,367 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:55:11,368 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:11,369 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@29bb22a0
+17:55:11,369 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:25,563 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@7d20d92b
+17:55:25,564 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:25,564 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@7d20d92b
+17:55:25,564 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:26,125 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@20739903
+17:55:26,125 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:55:26,127 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:26,128 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@20739903
+17:55:26,128 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:26,792 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@cb9c5d
+17:55:26,792 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:26,793 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@cb9c5d
+17:55:26,793 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:27,109 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@2c013bae
+17:55:27,109 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:27,109 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@2c013bae
+17:55:27,110 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:27,713 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@5dfa3d95
+17:55:27,713 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:27,714 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@5dfa3d95
+17:55:27,714 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:28,166 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@304c61c2
+17:55:28,167 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:55:28,170 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:28,171 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@304c61c2
+17:55:28,171 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:29,651 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@2ee007c9
+17:55:29,652 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:29,656 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@2ee007c9
+17:55:29,657 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:55,360 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@f68701a
+17:55:55,361 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:55,361 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@f68701a
+17:55:55,361 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:55,462 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@4f3ed32a
+17:55:55,462 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:55:55,465 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:55:55,465 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@4f3ed32a
+17:55:55,465 (RMI TCP Connection(5)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:57:18,135 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@befc7b6
+17:57:18,135 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:57:18,135 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@befc7b6
+17:57:18,135 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:57:18,234 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@792a89f4
+17:57:18,234 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:57:18,237 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:57:18,237 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@792a89f4
+17:57:18,237 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:06,750 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@732dce12
+17:58:06,750 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:06,751 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@732dce12
+17:58:06,751 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:06,847 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@6944e8c1
+17:58:06,848 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:58:06,850 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:06,850 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@6944e8c1
+17:58:06,850 (RMI TCP Connection(8)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:49,521 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@5b12bba0
+17:58:49,521 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:49,521 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@5b12bba0
+17:58:49,521 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:49,616 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1533a69e
+17:58:49,617 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:58:49,618 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:58:49,619 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1533a69e
+17:58:49,619 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:59:28,004 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@127053a9
+17:59:28,004 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:59:28,005 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@127053a9
+17:59:28,005 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:59:28,108 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@34f645a8
+17:59:28,108 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+17:59:28,112 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+17:59:28,113 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@34f645a8
+17:59:28,113 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:00:37,142 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@710ec7e6
+18:00:37,143 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:00:37,143 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@710ec7e6
+18:00:37,143 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:00:37,244 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@4696de68
+18:00:37,244 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:00:37,245 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:00:37,245 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@4696de68
+18:00:37,246 (RMI TCP Connection(11)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:01:53,630 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@791fbc48
+18:01:53,631 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:01:53,631 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@791fbc48
+18:01:53,631 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:01:53,729 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@674612ad
+18:01:53,729 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:01:53,738 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:01:53,739 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@674612ad
+18:01:53,739 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:01:55,390 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@24af9995
+18:01:55,391 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:01:55,391 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@24af9995
+18:01:55,391 (RMI TCP Connection(13)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:03:16,717 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@8662911
+18:03:16,718 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:03:16,718 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@8662911
+18:03:16,718 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:03:16,818 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@42e95cbf
+18:03:16,818 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:03:16,822 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:03:16,822 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@42e95cbf
+18:03:16,828 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:03:19,206 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@170a2f29
+18:03:19,206 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:03:19,206 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@170a2f29
+18:03:19,207 (RMI TCP Connection(15)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c5b074c
+18:04:06,863 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:04:07,314 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:04:07,940 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:04:07,952 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:04:07,967 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:04:07,968 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=525 ms, enhance=127 ms, total=652 ms. Consult the log for full details
+18:04:28,730 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:04:28,739 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:04:29,216 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@51a2cfbc
+18:04:29,216 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:04:29,216 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@51a2cfbc
+18:04:29,216 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:04:29,325 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@53b252a4
+18:04:29,326 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:04:29,331 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:04:29,332 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@53b252a4
+18:04:29,332 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:04:31,366 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@3488976e
+18:04:31,366 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:04:31,366 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@3488976e
+18:04:31,367 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:05:32,588 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@2f504d39
+18:05:32,589 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:05:32,589 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@2f504d39
+18:05:32,589 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:05:34,551 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@39f253d6
+18:05:34,551 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:05:34,552 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@39f253d6
+18:05:34,552 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:05:50,906 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:05:51,356 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:05:51,996 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:05:52,008 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:05:52,023 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:05:52,024 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=537 ms, enhance=128 ms, total=665 ms. Consult the log for full details
+18:06:13,047 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:06:13,056 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:06:13,608 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@3ff3a808
+18:06:13,608 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@6e24d5d8
+18:06:13,608 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@3ff3a808
+18:06:13,608 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@6e24d5d8
+18:06:13,717 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@2bb7f958
+18:06:13,717 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:06:13,730 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@6e24d5d8
+18:06:13,730 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@2bb7f958
+18:06:13,730 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@6e24d5d8
+18:06:15,383 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@738dd1b3
+18:06:15,383 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@6e24d5d8
+18:06:15,383 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@738dd1b3
+18:06:15,384 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@6e24d5d8
+18:06:52,205 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:06:52,661 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:06:53,306 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:06:53,319 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:06:53,334 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:06:53,335 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=538 ms, enhance=133 ms, total=671 ms. Consult the log for full details
+18:07:12,124 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:07:12,133 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:07:12,674 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@c36d74a
+18:07:12,674 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:07:12,674 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@c36d74a
+18:07:12,675 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:07:12,789 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@5f05c0eb
+18:07:12,790 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:07:12,802 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:07:12,802 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@5f05c0eb
+18:07:12,802 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:07:15,712 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@65b5ba4c
+18:07:15,712 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:07:15,712 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@65b5ba4c
+18:07:15,712 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:15:32,856 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:15:33,323 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:15:33,977 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:15:33,990 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:15:34,004 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:15:34,005 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=552 ms, enhance=129 ms, total=681 ms. Consult the log for full details
+18:16:56,743 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:16:56,752 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:16:56,815 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.Query] - Query for candidates of es.deusto.ingenieria.sd.tralala.server.data.Member and subclasses resulted in no possible candidates
+Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+org.datanucleus.store.exceptions.NoTableManagedException: Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+	at org.datanucleus.store.mapped.MappedStoreManager.getDatastoreClass(MappedStoreManager.java:430)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:410)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:864)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO.get(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.UserService.login(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.rmi.UserSession.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+18:16:56,819 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:16:56,819 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:17:00,971 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.Query] - Query for candidates of es.deusto.ingenieria.sd.tralala.server.data.Member and subclasses resulted in no possible candidates
+Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+org.datanucleus.store.exceptions.NoTableManagedException: Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+	at org.datanucleus.store.mapped.MappedStoreManager.getDatastoreClass(MappedStoreManager.java:430)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:410)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:864)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO.get(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.UserService.login(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.rmi.UserSession.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+18:17:00,975 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:17:00,976 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:17:28,767 (RMI TCP Connection(3)-127.0.0.1) WARN  [DataNucleus.Query] - Query for candidates of es.deusto.ingenieria.sd.tralala.server.data.Member and subclasses resulted in no possible candidates
+Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+org.datanucleus.store.exceptions.NoTableManagedException: Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+	at org.datanucleus.store.mapped.MappedStoreManager.getDatastoreClass(MappedStoreManager.java:430)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:410)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:864)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO.get(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.UserService.login(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.rmi.UserSession.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+18:17:28,771 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:17:28,772 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@2018c0a1
+18:18:35,597 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:18:36,051 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:18:36,693 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:18:36,705 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:18:36,720 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:18:36,721 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=538 ms, enhance=129 ms, total=667 ms. Consult the log for full details
+18:18:58,051 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:18:58,061 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:18:58,631 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1b5ca771
+18:18:58,632 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@7c3c2d88
+18:18:58,632 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1b5ca771
+18:18:58,632 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7c3c2d88
+18:18:58,741 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@7e34886a
+18:18:58,741 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:18:58,747 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@7c3c2d88
+18:18:58,747 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@7e34886a
+18:18:58,747 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7c3c2d88
+18:19:03,275 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@78c8ec7e
+18:19:03,276 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@7c3c2d88
+18:19:03,276 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@78c8ec7e
+18:19:03,276 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@7c3c2d88
+18:25:13,461 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:25:13,914 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:25:14,570 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:25:14,583 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:25:14,597 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:25:14,598 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=555 ms, enhance=126 ms, total=681 ms. Consult the log for full details
+18:25:26,303 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:25:26,794 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:25:27,463 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:25:27,475 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:25:27,489 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:25:27,490 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=567 ms, enhance=127 ms, total=694 ms. Consult the log for full details
+18:31:33,861 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:31:34,318 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:31:34,986 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:31:34,999 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:31:35,013 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:31:35,014 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=564 ms, enhance=129 ms, total=693 ms. Consult the log for full details
+18:33:03,535 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:33:03,544 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:33:03,606 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.Query] - Query for candidates of es.deusto.ingenieria.sd.tralala.server.data.Member and subclasses resulted in no possible candidates
+Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+org.datanucleus.store.exceptions.NoTableManagedException: Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+	at org.datanucleus.store.mapped.MappedStoreManager.getDatastoreClass(MappedStoreManager.java:430)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:410)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:864)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO.get(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.UserService.login(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.rmi.UserSession.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+18:33:03,611 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@4c98594d
+18:33:03,611 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@4c98594d
+18:33:06,030 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.Query] - Query for candidates of es.deusto.ingenieria.sd.tralala.server.data.Member and subclasses resulted in no possible candidates
+Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+org.datanucleus.store.exceptions.NoTableManagedException: Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+	at org.datanucleus.store.mapped.MappedStoreManager.getDatastoreClass(MappedStoreManager.java:430)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:410)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:864)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO.get(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.UserService.login(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.rmi.UserSession.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+18:33:06,034 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@4c98594d
+18:33:06,038 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@4c98594d
+18:33:16,581 (RMI TCP Connection(3)-127.0.0.1) WARN  [DataNucleus.Query] - Query for candidates of es.deusto.ingenieria.sd.tralala.server.data.Member and subclasses resulted in no possible candidates
+Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+org.datanucleus.store.exceptions.NoTableManagedException: Persistent class "es.deusto.ingenieria.sd.tralala.server.data.Member" has no table in the database, but the operation requires it. Please check the specification of the MetaData for this class.
+	at org.datanucleus.store.mapped.MappedStoreManager.getDatastoreClass(MappedStoreManager.java:430)
+	at org.datanucleus.store.rdbms.query.RDBMSQueryUtils.getStatementForCandidates(RDBMSQueryUtils.java:410)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:864)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO.get(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.UserService.login(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.rmi.UserSession.login(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:322)
+	at sun.rmi.transport.Transport$1.run(Transport.java:177)
+	at sun.rmi.transport.Transport$1.run(Transport.java:174)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:173)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:553)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:808)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:667)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:722)
+18:33:16,585 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@4c98594d
+18:33:16,590 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@4c98594d
+18:33:36,353 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:33:36,818 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:33:37,478 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:33:37,491 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:33:37,505 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:33:37,506 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=559 ms, enhance=127 ms, total=686 ms. Consult the log for full details
+18:33:54,806 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:33:54,815 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:33:55,376 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@5ff4f9bf
+18:33:55,376 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@36ff208a
+18:33:55,376 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@5ff4f9bf
+18:33:55,376 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@36ff208a
+18:33:55,490 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@2ae827e1
+18:33:55,491 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:33:55,501 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@36ff208a
+18:33:55,501 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@2ae827e1
+18:33:55,501 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@36ff208a
+18:33:57,125 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@6702ed9a
+18:33:57,125 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@36ff208a
+18:33:57,125 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@6702ed9a
+18:33:57,125 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@36ff208a
+18:36:36,808 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:36:37,260 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:36:37,923 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:36:37,941 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:36:37,956 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:36:37,957 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=560 ms, enhance=134 ms, total=694 ms. Consult the log for full details
+18:38:51,282 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:38:51,736 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:38:52,391 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:38:52,404 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:38:52,418 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:38:52,419 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=554 ms, enhance=127 ms, total=681 ms. Consult the log for full details
+18:39:25,605 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:39:26,057 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:39:26,723 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:39:26,736 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:39:26,750 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:39:26,751 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=564 ms, enhance=127 ms, total=691 ms. Consult the log for full details
+18:39:54,980 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:39:54,989 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:39:55,523 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@678c7d58
+18:39:55,523 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@204db0e4
+18:39:55,523 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@678c7d58
+18:39:55,523 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@204db0e4
+18:39:55,632 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@3b5316d4
+18:39:55,632 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:39:55,643 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@204db0e4
+18:39:55,643 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@3b5316d4
+18:39:55,643 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@204db0e4
+18:39:57,474 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@b14f3c
+18:39:57,474 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@204db0e4
+18:39:57,474 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@b14f3c
+18:39:57,475 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@204db0e4
+18:41:32,282 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:41:32,731 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:41:33,386 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:41:33,398 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:41:33,412 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:41:33,413 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=553 ms, enhance=128 ms, total=681 ms. Consult the log for full details
+18:42:08,608 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+18:42:09,063 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+18:42:09,759 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Member.class" with enhanced definition
+18:42:09,772 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Play.class" with enhanced definition
+18:42:09,787 (main) INFO  [DataNucleus.Enhancer] - Writing class file "/home/aimar/GitWorkspace/sd/Tralala_UserManager/bin/es/deusto/ingenieria/sd/tralala/server/data/Song.class" with enhanced definition
+18:42:09,788 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=581 ms, enhance=142 ms, total=723 ms. Consult the log for full details
+18:42:27,606 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:42:27,615 (RMI TCP Connection(2)-127.0.0.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+18:42:28,190 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@5debce3
+18:42:28,191 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:42:28,191 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@5debce3
+18:42:28,191 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:42:28,302 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@72bcb509
+18:42:28,302 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:42:28,310 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:42:28,310 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@72bcb509
+18:42:28,310 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:42:30,364 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@c3e122
+18:42:30,364 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:42:30,364 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@c3e122
+18:42:30,365 (RMI TCP Connection(2)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:43:13,870 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@17e9cdb6
+18:43:13,871 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:43:13,871 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@17e9cdb6
+18:43:13,871 (RMI TCP Connection(3)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:45:15,549 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@39f253d6
+18:45:15,550 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:45:15,564 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@39f253d6
+18:45:15,565 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:45:15,848 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@413b3b7e
+18:45:15,849 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:45:15,852 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:45:15,853 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@413b3b7e
+18:45:15,853 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:45:18,017 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@11a9281f
+18:45:18,018 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:45:18,018 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@11a9281f
+18:45:18,019 (RMI TCP Connection(4)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:17,187 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@55662d9a
+18:48:17,211 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:17,212 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@55662d9a
+18:48:17,212 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:17,380 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@7efe7a98
+18:48:17,381 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:48:17,382 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:17,382 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@7efe7a98
+18:48:17,383 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:19,123 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@15e7a880
+18:48:19,123 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:19,127 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@15e7a880
+18:48:19,127 (RMI TCP Connection(6)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:47,489 (RMI TCP Connection(7)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@3acbbfa1
+18:48:47,490 (RMI TCP Connection(7)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:48:47,503 (RMI TCP Connection(7)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:48:47,504 (RMI TCP Connection(7)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@3acbbfa1
+18:48:47,504 (RMI TCP Connection(7)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:21,007 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@b05be25
+18:50:21,007 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:21,007 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@b05be25
+18:50:21,008 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:21,160 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@5d1c5b77
+18:50:21,160 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:50:21,164 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:21,164 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@5d1c5b77
+18:50:21,165 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:23,030 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@533f785b
+18:50:23,030 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:23,031 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@533f785b
+18:50:23,031 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:27,819 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@176d9ed7
+18:50:27,819 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.Query] - Reading in results for query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" since the connection used is closing
+18:50:27,823 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:27,823 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@176d9ed7
+18:50:27,824 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:29,078 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@68c870ee
+18:50:29,079 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:29,079 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@68c870ee
+18:50:29,079 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:29,897 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@34196273
+18:50:29,898 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:29,898 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@34196273
+18:50:29,898 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:30,603 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@cac98e5
+18:50:30,603 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:30,603 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@cac98e5
+18:50:30,604 (RMI TCP Connection(9)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:48,309 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@124d0242
+18:50:48,310 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
+18:50:48,310 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@124d0242
+18:50:48,310 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855

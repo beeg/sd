@@ -45,7 +45,7 @@
                 <column jdbc-type="BIGINT"/> 
 			</field> 
 			<field name="lyrics">
-                <column length="32" jdbc-type="VARCHAR"/>
+                <column length="2000" jdbc-type="VARCHAR"/>
             </field>
 			<field name="album">
                 <column length="32" jdbc-type="VARCHAR"/>
