@@ -298,20 +298,13 @@ public class MainWindow extends JFrame implements ActionListener{
 			}
 		} else if(source == bSearch){
 			try{
-				/*tmSongs = new DefaultTableModel(SongDTO.getFieldNames(), 0);
+				tmSongs = new DefaultTableModel(SongDTO.getFieldNames(), 0);
 				for(SongDTO song: controller.getSongs()){
 					System.out.println("Paso por bSearch: "+song.getTitle());
 					tmSongs.addRow(song.getFields());
 				}
 				sTable = new JScrollPane(tSongs);
-				tSongs.setModel(tmSongs);*/
-				tableContent=pasarLista(controller.getSongs());
-				tSongs.setModel(new javax.swing.table.DefaultTableModel(
-		                tableContent,
-		                new String [] {
-		                	"Name","Artist","Album","Duration","Release Date"
-		                }
-		            ));
+				tSongs.setModel(tmSongs);
 			} catch (Exception e){
 				e.printStackTrace();
 			}

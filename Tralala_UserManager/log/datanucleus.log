@@ -801,3 +801,97 @@ Caused by: java.net.ConnectException: Connection refused: connect
 16:13:10,632 (RMI TCP Connection(8)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@68ad91
 16:13:10,632 (RMI TCP Connection(8)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@3423ae
 16:13:10,632 (RMI TCP Connection(8)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@68ad91
+16:18:11,104 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+16:18:11,357 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+16:18:11,938 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Member.class" with enhanced definition
+16:18:11,949 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Play.class" with enhanced definition
+16:18:11,966 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Song.class" with enhanced definition
+16:18:11,967 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=462 ms, enhance=144 ms, total=606 ms. Consult the log for full details
+16:18:40,409 (RMI TCP Connection(2)-192.168.224.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+16:18:40,429 (RMI TCP Connection(2)-192.168.224.1) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+16:18:40,866 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@9e6837
+16:18:40,866 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:18:40,866 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@9e6837
+16:18:40,867 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:18:40,940 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@186d72f
+16:18:40,941 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+16:18:40,944 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:18:40,944 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@186d72f
+16:18:40,944 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:18:50,627 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@9c00ea
+16:18:50,627 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:18:50,627 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@9c00ea
+16:18:50,627 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:18:57,659 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@628a21
+16:18:57,659 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:18:57,659 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@628a21
+16:18:57,659 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:19:00,897 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@a8d6b3
+16:19:00,898 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:19:00,898 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@a8d6b3
+16:19:00,898 (RMI TCP Connection(2)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:02,241 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1b155b7
+16:24:02,241 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:02,241 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1b155b7
+16:24:02,241 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:02,378 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@12dc6
+16:24:02,379 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+16:24:02,380 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:02,380 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@12dc6
+16:24:02,380 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:11,766 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1c84be9
+16:24:11,766 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:11,767 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1c84be9
+16:24:11,767 (RMI TCP Connection(5)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:48,128 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@16de23f
+16:24:48,128 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:48,128 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@16de23f
+16:24:48,128 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:48,265 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@10688e5
+16:24:48,265 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+16:24:48,266 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:48,266 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@10688e5
+16:24:48,266 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:51,033 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1284cb6
+16:24:51,034 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:51,034 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1284cb6
+16:24:51,034 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:52,374 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1574df8
+16:24:52,374 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:52,375 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1574df8
+16:24:52,375 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:54,061 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1360860
+16:24:54,061 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+16:24:54,062 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:54,062 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1360860
+16:24:54,062 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:56,686 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@13a05d2
+16:24:56,686 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:24:56,686 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@13a05d2
+16:24:56,687 (RMI TCP Connection(6)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:47,090 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1798b40
+16:25:47,091 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:47,091 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1798b40
+16:25:47,091 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:47,199 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@53a57a
+16:25:47,200 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+16:25:47,201 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:47,201 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@53a57a
+16:25:47,201 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:49,176 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@da1ac
+16:25:49,176 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:49,176 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@da1ac
+16:25:49,176 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:49,927 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@26ea08
+16:25:49,927 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:49,927 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@26ea08
+16:25:49,928 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:51,158 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1615682
+16:25:51,159 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+16:25:51,159 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:51,160 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1615682
+16:25:51,160 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:52,399 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1884f64
+16:25:52,399 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3c6543
+16:25:52,399 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1884f64
+16:25:52,399 (RMI TCP Connection(7)-192.168.224.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3c6543
