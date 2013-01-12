@@ -319,13 +319,12 @@ public class MainWindow extends JFrame implements ActionListener{
 			}
 		} else if(source == bShowPermanent){
 			try{
-				/*tmSongs = new DefaultTableModel(SongDTO.getFieldNames(), 0);
+				tmSongs = new DefaultTableModel(SongDTO.getFieldNames(), 0);
 				for(SongDTO song: controller.getPermanents()){
 					tmSongs.addRow(song.getFields());
 				}
 				sTable = new JScrollPane(tSongs);
-				tSongs.setModel(tmSongs);*/
-				tableContent=pasarLista(controller.getPermanents());
+				tSongs.setModel(tmSongs);
 			} catch (Exception e){
 				e.printStackTrace();
 			}
