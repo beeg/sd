@@ -23,6 +23,6 @@ public class MemberAssembler {
 		System.out.println("Member: "+m);
 		System.out.println("* Assembling member ...");
 		
-		return new MemberDTO(m);
+		return (m != null)?new MemberDTO(m):null;
 	}
 }

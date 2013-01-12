@@ -11,6 +11,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
@@ -59,6 +60,7 @@ public class MainWindow extends JFrame implements ActionListener{
 	}
 	
 	public void changeToMain(){
+		setContentPane(new JPanel());
 		tSongName = new JTextField();
         tAuthor = new JTextField();
         tAlbum = new JTextField();
@@ -224,6 +226,7 @@ public class MainWindow extends JFrame implements ActionListener{
 	}
 	
 	public void changeToLogin(){
+		setContentPane(new JPanel());
 		tNick = new JTextField();
         tPassword = new JTextField();
         lnick = new JLabel();
@@ -348,6 +351,7 @@ String[][] pasarLista(List<SongDTO> songs)	{
 		for(int i=0;i<o.length;i++)	{
 			System.out.println(o[i].toString());
 			aSongs[j][i]=o[i].toString();
+			System.out.println(o[i].toString());
 		}
 	}
 	return aSongs;

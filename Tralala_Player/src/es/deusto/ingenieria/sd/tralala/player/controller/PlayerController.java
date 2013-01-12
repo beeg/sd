@@ -14,7 +14,7 @@ import es.deusto.ingenieria.sd.tralala.server.data.dto.SongFileDTO;
 
 public class PlayerController {
 
-	private String user;
+	private MemberDTO user;
 	private ServiceLocator sLocator;
 	private SoundPlayer player;
 	
@@ -31,12 +31,12 @@ public class PlayerController {
 	}
 	
 	public boolean login(String username, String password) throws RemoteException{
-		user = sLocator.getService().login(username, password).getUser();
+		user = sLocator.getService().login(username, password);
 		return (user != null);
 	}
 	
 	public List<SongDTO> getFavourites() throws RemoteException{
-		return sLocator.getService().getFavourites(user);
+		return sLocator.getService().getFavourites(user.getUser());
 	}
 	
 	public String play(String songname) throws RemoteException{
@@ -46,11 +46,11 @@ public class PlayerController {
 	}
 	
 	public List<SongDTO> getPermanents() throws RemoteException{
-		return sLocator.getService().getPermanents(user);
+		return sLocator.getService().getPermanents(user.getUser());
 	}
 	
 	public List<MemberDTO> getFriends() throws RemoteException{
-		return sLocator.getService().getFriends(user);
+		return sLocator.getService().getFriends(user.getUser());
 	}
 	
 	public void logout(){
