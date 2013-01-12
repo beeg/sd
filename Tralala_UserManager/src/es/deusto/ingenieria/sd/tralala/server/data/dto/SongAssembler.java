@@ -27,13 +27,13 @@ public class SongAssembler {
 
 		System.out.println("* Assembling song ...");
 		
-		return new SongDTO(s);
+		return (s != null)?new SongDTO(s): null;
 	}
 	
 	public static SongFileDTO assembleFile(Song s) throws UnsupportedAudioFileException, IOException{
 		
 		System.out.println("* Assembling song file ...");
 		
-		return new SongFileDTO(s);
+		return (s != null)? new SongFileDTO(s): null;
 	}
 }
