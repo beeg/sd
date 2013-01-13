@@ -1,0 +1,16 @@
+package es.deusto.ingenieria.sd.tralala.server;
+
+import java.util.List;
+
+import es.deusto.ingenieria.sd.tralala.server.data.Song;
+
+public class SongByArtist extends SearchStrategy{
+
+	@Override
+	public List<Song> getSong(String name) {
+		// TODO Auto-generated method stub
+		new SongJDO().get
+		return null;
+	}
+
+}

@@ -1,6 +1,7 @@
 package es.deusto.ingenieria.sd.tralala.player.controller;
 
 import java.rmi.RemoteException;
+
 import java.util.List;
 
 import javax.swing.UIManager;
@@ -11,6 +12,7 @@ import es.deusto.ingenieria.sd.tralala.player.remote.ServiceLocator;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongFileDTO;
+import es.deusto.ingenieria.sd.tralala.server.*;
 
 public class PlayerController {
 
@@ -28,6 +30,10 @@ public class PlayerController {
 	
 	public List<SongDTO> getSongs() throws RemoteException{
 		return sLocator.getService().getSongs();
+	}
+	
+	public List<SongDTO> findSongs(String name) throws RemoteException{
+		return sLocator.getService().findSongs(name);
 	}
 	
 	public boolean login(String username, String password) throws RemoteException{
@@ -56,6 +62,11 @@ public class PlayerController {
 	
 	public void logout(){
 		user = null;
+	}
+	
+	public void setStrategy(String strategy) throws RemoteException	{
+		System.out.println("Controller. SetStrategy");
+		sLocator.getService().setStrategy(strategy);
 	}
 	
 	public static void main(String [] args){

@@ -7,6 +7,9 @@ import java.util.List;
 
 import javax.sound.sampled.UnsupportedAudioFileException;
 
+import es.deusto.ingenieria.sd.tralala.server.SongByAlbum;
+import es.deusto.ingenieria.sd.tralala.server.SongByArtist;
+import es.deusto.ingenieria.sd.tralala.server.SongByTitle;
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
@@ -114,6 +117,12 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 		// TODO Auto-generated method stub
 		return SongAssembler.assemble(songManager.getSongs());
 	}
+	
+	//en base al strategy
+	public List<SongDTO> findSongs(String name) throws RemoteException{ 
+		// TODO Auto-generated method stub
+		return SongAssembler.assemble(songManager.getMyStrategy().getSong(name));
+	}
 
 	@Override
 	public void addFavourite(String user, String song) throws RemoteException{
@@ -162,5 +171,15 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	public void logout(String user) throws RemoteException{
 		// TODO Auto-generated method stub
 		this.userManager.logout(user);
+	}
+	
+	public void setStrategy(String strategy) throws RemoteException	{
+		System.out.println("UserSession setStrategy");
+		if(strategy.equals("Title"))	{
+			this.songManager.setMyStrategy(new SongByTitle());
+		} else if(strategy.equals("Artist"))	{
+			this.songManager.setMyStrategy(new SongByArtist());
+		} else { this.songManager.setMyStrategy(new SongByAlbum());	}
+		
 	}
 }

@@ -52,6 +52,8 @@ public class MainWindow extends JFrame implements ActionListener{
     private JTextArea taLyrics;
     private DefaultTableModel tmSongs;
     private String[][] tableContent;
+    private javax.swing.JLabel lSearchBy;
+    private javax.swing.JComboBox cbCriteria;
     
 	public MainWindow(PlayerController controller)	{
 		this.controller = controller;
@@ -84,6 +86,8 @@ public class MainWindow extends JFrame implements ActionListener{
         bNext = new JButton();
         bRecommendation = new JButton();
         bAccount = new JButton();
+        cbCriteria = new javax.swing.JComboBox();
+        lSearchBy = new javax.swing.JLabel();
         //tmSongs = new DefaultTableModel(new String[]{"Name","Artist","Album","Duration","Release Date"}, 0);
         
         /* NEED TO REMOVE FROM OBSERVABLE */
@@ -95,7 +99,8 @@ public class MainWindow extends JFrame implements ActionListener{
         bSearch.setText("Search");
         bShowFavourites.setText("Show Favourites");
         bShowPermanent.setText("Show Permanent List");
-
+        cbCriteria.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Title", "Artist", "Album" }));
+        lSearchBy.setText("Search by:");
         listFriends.setModel(lmFriends);
         sList.setViewportView(listFriends);
         lFriends.setText("Friends");
@@ -143,17 +148,23 @@ public class MainWindow extends JFrame implements ActionListener{
                             .addComponent(tAuthor)
                             .addComponent(tAlbum))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(bSearch)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(bShowFavourites)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(bShowPermanent)
-                                .addGap(18, 18, 18)
+                                .addComponent(bShowPermanent))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lSearchBy)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(cbCriteria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(lFriends)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
                                 .addComponent(bAccount))))
                     .addGroup(layout.createSequentialGroup()
@@ -187,7 +198,9 @@ public class MainWindow extends JFrame implements ActionListener{
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(tSongName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(bAccount))
+                            .addComponent(bAccount)
+                            .addComponent(cbCriteria, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lSearchBy))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tAuthor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -221,6 +234,18 @@ public class MainWindow extends JFrame implements ActionListener{
                     .addComponent(bRecommendation, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        
+        cbCriteria.addActionListener (new ActionListener () {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                	System.out.println("Window. set strategy");
+					controller.setStrategy(cbCriteria.getSelectedItem().toString());
+				} catch (RemoteException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+            }
+        });
         
         pack();
 		setLocationRelativeTo(null);
@@ -306,7 +331,15 @@ public class MainWindow extends JFrame implements ActionListener{
 				}
 				sTable = new JScrollPane(tSongs);
 				tSongs.setModel(tmSongs);*/
-				tableContent=pasarLista(controller.getSongs());
+				String criteria="";
+				if(cbCriteria.getSelectedIndex()==0)	{ //Title
+					criteria=tSongName.getText();
+				} else if(cbCriteria.getSelectedIndex()==1)	{ //Artist
+					criteria=tAuthor.getText();
+				} else	{
+					criteria=tAlbum.getText();
+				}
+				tableContent=pasarLista(controller.findSongs(criteria));
 				tSongs.setModel(new javax.swing.table.DefaultTableModel(
 		                tableContent,
 		                new String [] {

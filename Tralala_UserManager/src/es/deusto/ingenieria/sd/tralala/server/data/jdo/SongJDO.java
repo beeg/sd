@@ -40,6 +40,18 @@ public class SongJDO {
 		return tempSong;
 	}
 	
+	public List<Song> getSong(String name){
+		Transaction tx = pm.currentTransaction();
+		tx.begin();
+		Query query = pm.newQuery("SELECT FROM " + Song.class.getName() + " WHERE title == '" + name + "'");
+		query.setUnique(true);
+		Song tempSong = (Song)query.execute();
+		tx.commit();
+		List<Song> aux = new ArrayList<Song> ();
+		aux.add(tempSong);
+		return aux;
+	}
+	
 	public List<Song> getSongByArtist(String name){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();

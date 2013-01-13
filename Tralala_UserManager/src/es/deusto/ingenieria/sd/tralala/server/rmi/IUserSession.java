@@ -4,6 +4,7 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 
+import es.deusto.ingenieria.sd.tralala.server.SearchStrategy;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
@@ -57,4 +58,8 @@ public interface IUserSession extends Remote{
 	public void /*DTO*/ getCurrentPayment(String user/*ADD PAYMENTMETHODDTO HERE*/) throws RemoteException;
 
 	public void logout(String user) throws RemoteException;
+	
+	public void setStrategy(String strategy) throws RemoteException;
+	
+	public List<SongDTO> findSongs(String name) throws RemoteException;
 }
