@@ -1,0 +1,171 @@
+package es.deusto.ingenieria.sd.tralala.server.rmi;
+
+import java.io.IOException;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
+import java.util.List;
+
+import javax.sound.sampled.UnsupportedAudioFileException;
+
+import es.deusto.ingenieria.sd.tralala.server.SongService;
+import es.deusto.ingenieria.sd.tralala.server.UserService;
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
+import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberAssembler;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.RecommendationDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.SongAssembler;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.SongFileDTO;
+import es.deusto.ingenieria.sd.tralala.server.remote.observer.UserRemoteObservable;
+import es.deusto.ingenieria.sd.util.observer.remote.IRemoteObserver;
+
+public class UserSession extends UnicastRemoteObject implements IUserSession{
+
+	private SongService songManager;
+	private UserService userManager;
+	private UserRemoteObservable usRo;
+	private static final long serialVersionUID = 1L;
+
+	public UserSession() throws RemoteException {
+		super();
+		userManager = new UserService();
+		songManager = new SongService();
+		usRo = new UserRemoteObservable();
+	}
+
+	@Override
+	public void sendRecommendation(MemberDTO user, MemberDTO friend, SongDTO song) throws RemoteException{
+	}
+
+	@Override
+	public void rejectRecommendation(MemberDTO user, RecommendationDTO recommendation) throws RemoteException{
+	}
+
+	@Override
+	public void acceptRecommendation(MemberDTO user, RecommendationDTO recommendation) throws RemoteException{
+	}
+	
+	@Override
+	public void getRecommendations(MemberDTO user) throws RemoteException{
+	}
+
+	@Override
+	public void addFriend(MemberDTO user, MemberDTO friend) throws RemoteException{
+	}
+
+	@Override
+	public void removeFriend(MemberDTO user, MemberDTO friend) throws RemoteException{
+	}
+
+	@Override
+	public void acceptFriend(MemberDTO user, MemberDTO friend) throws RemoteException{
+		// TODO Auto-generated method stub
+		//userManager.acceptFriend(main, friend);
+	}
+
+	@Override
+	public MemberDTO findUser(String username) throws RemoteException{
+		// TODO Auto-generated method stub
+		return MemberAssembler.assemble(userManager.findUser(username));
+	}
+
+	@Override
+	public List<MemberDTO> getFriends(MemberDTO user) throws RemoteException{
+		// TODO Auto-generated method stub
+		return MemberAssembler.assemble(userManager.getFriends(user.getUser()));
+	}
+
+	@Override
+	public MemberDTO login(String username, String password) throws RemoteException{	
+		return MemberAssembler.assemble(userManager.login(username, password));
+	}
+
+	@Override
+	public SongFileDTO play(SongDTO song) throws RemoteException{
+		try {
+			return SongAssembler.assembleFile(this.songManager.play(song.getTitle()));
+		} catch (UnsupportedAudioFileException | IOException e) {
+			System.out.println(e.getMessage());
+			return null;
+		}
+	}
+
+	@Override
+	public List<SongDTO> getFavourites(MemberDTO user) throws RemoteException{
+		// TODO Auto-generated method stub
+		return SongAssembler.assemble(songManager.getFavourites(user.getUser()));
+	}
+
+	@Override
+	public List<SongDTO> getPermanents(MemberDTO user) throws RemoteException{
+		// TODO Auto-generated method stub
+		return SongAssembler.assemble(songManager.getPermanents(user.getUser()));
+	}
+
+	@Override
+	public List<SongDTO> getSongs() throws RemoteException{
+		// TODO Auto-generated method stub
+		return SongAssembler.assemble(songManager.getSongs());
+	}
+
+	@Override
+	public void addFavourite(MemberDTO user, SongDTO song) throws RemoteException{
+		// TODO Auto-generated method stub
+		this.userManager.addFavourite(user.getUser(), song.getTitle());
+		
+	}
+
+	@Override
+	public void removeFavourite(MemberDTO user, SongDTO song) throws RemoteException{
+		// TODO Auto-generated method stub
+		this.userManager.removeFavourite(user.getUser(), song.getTitle());
+	}
+
+	@Override
+	public void changePayment() throws RemoteException{
+		// TODO Auto-generated method stub
+		this.userManager.changePayment();
+	}
+
+	@Override
+	public void addPayment() throws RemoteException{
+		// TODO Auto-generated method stub
+		this.userManager.addPayment();
+	}
+
+	@Override
+	public void changePaymentType() throws RemoteException{
+		// TODO Auto-generated method stub
+		this.userManager.changePaymentType();
+	}
+
+	@Override
+	public void getPayments(MemberDTO user) throws RemoteException{
+		// TODO Auto-generated method stub
+		this.userManager.getPayments(user.getUser());
+	}
+
+	@Override
+	public void getCurrentPayment(MemberDTO user) throws RemoteException{
+		// TODO Auto-generated method stub
+		this.userManager.getCurrentPayment(user.getUser());
+	}
+
+	@Override
+	public void logout(MemberDTO user) throws RemoteException{
+		this.userManager.logout(user.getUser());
+	}
+
+
+	@Override
+	public void addRemoteObserver(MemberDTO m, IRemoteObserver arg0) throws RemoteException {
+		usRo.addRemoteObserver(arg0);
+	}
+
+	@Override
+	public void deleteRemoteObserver(IRemoteObserver arg0)
+			throws RemoteException {
+		usRo.addRemoteObserver(arg0);	
+	}
+}

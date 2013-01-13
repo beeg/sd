@@ -2,6 +2,8 @@ package es.deusto.ingenieria.sd.tralala.player.gui;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.rmi.RemoteException;
 import java.util.List;
 
@@ -22,7 +24,7 @@ import es.deusto.ingenieria.sd.tralala.player.controller.PlayerController;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 
-public class MainWindow extends JFrame implements ActionListener{
+public class MainWindow extends JFrame implements ActionListener, WindowListener{
 
 	PlayerController controller;
     private JButton bAccount;
@@ -87,7 +89,7 @@ public class MainWindow extends JFrame implements ActionListener{
         //tmSongs = new DefaultTableModel(new String[]{"Name","Artist","Album","Duration","Release Date"}, 0);
         
         /* NEED TO REMOVE FROM OBSERVABLE */
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        addWindowListener(this);
 
         tSongName.setText("SongName");
         tAuthor.setText("Author");
@@ -102,7 +104,7 @@ public class MainWindow extends JFrame implements ActionListener{
         bAdd.setText("Add");
         bRemove.setText("Remove");
         try {
-			tableContent=pasarLista(controller.getSongs());
+			tableContent=list2Table(controller.getSongs());
 		} catch (RemoteException e) {
 			// TODO Auto-generated catch block
 			System.out.println("error con tabla");
@@ -284,17 +286,9 @@ public class MainWindow extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent arg0) {
 		Object source = arg0.getSource();
 		if(source == bLogin){
-			try{
-				System.out.println("Paso por login");
-				if(controller.login(tNick.getText(), tPassword.getText())){
-					changeToMain();
-					/*for(MemberDTO member: controller.getFriends()){
-						lmFriends.addElement(member);
-					}*/
-				} else {
-					JOptionPane.showMessageDialog(this, "Sorry your password is not correct.");
-				}
-			} catch (Exception e){
+			try {
+				controller.login(tNick.getText(), tPassword.getText());
+			} catch (RemoteException e) {
 				e.printStackTrace();
 			}
 		} else if(source == bSearch){
@@ -306,7 +300,7 @@ public class MainWindow extends JFrame implements ActionListener{
 				}
 				sTable = new JScrollPane(tSongs);
 				tSongs.setModel(tmSongs);*/
-				tableContent=pasarLista(controller.getSongs());
+				tableContent=list2Table(controller.getSongs());
 				tSongs.setModel(new javax.swing.table.DefaultTableModel(
 		                tableContent,
 		                new String [] {
@@ -325,7 +319,7 @@ public class MainWindow extends JFrame implements ActionListener{
 				}
 				sTable = new JScrollPane(tSongs);
 				tSongs.setModel(tmSongs);*/
-				tableContent=pasarLista(controller.getFavourites());
+				tableContent=list2Table(controller.getFavourites());
 				tSongs.setModel(new javax.swing.table.DefaultTableModel(
 		                tableContent,
 		                new String [] {
@@ -344,7 +338,7 @@ public class MainWindow extends JFrame implements ActionListener{
 				}
 				sTable = new JScrollPane(tSongs);
 				tSongs.setModel(tmSongs);*/
-				tableContent=pasarLista(controller.getPermanents());
+				tableContent=list2Table(controller.getPermanents());
 				tSongs.setModel(new javax.swing.table.DefaultTableModel(
 			                tableContent,
 			                new String [] {
@@ -358,7 +352,7 @@ public class MainWindow extends JFrame implements ActionListener{
 		} else if(source == bPlay){
 			try{
 				System.out.println(tSongs.getModel().getValueAt(tSongs.getSelectedRow(), 0));
-				String lyrics = controller.play(tSongs.getModel().getValueAt(tSongs.getSelectedRow(), 0).toString());
+				String lyrics = controller.play((SongDTO)tSongs.getModel().getValueAt(tSongs.getSelectedRow(), 0));
 				taLyrics = new JTextArea(lyrics);
 				sTable.setViewportView(taLyrics);
 			} catch (Exception e){
@@ -368,15 +362,78 @@ public class MainWindow extends JFrame implements ActionListener{
 	}
 	
 
-String[][] pasarLista(List<SongDTO> songs)	{
+	private String[][] list2Table(List<SongDTO> songs)	{
 	String[][] aSongs = new String[songs.size()][5];
-	for(int j =0;j<songs.size();j++)	{
-		Object[] o =songs.get(j).getFields();
-		for(int i=0;i<o.length;i++)	{
-			aSongs[j][i]=o[i].toString();
+		for(int j =0;j<songs.size();j++)	{
+			Object[] o =songs.get(j).getFields();
+			for(int i=0;i<o.length;i++)	{
+				aSongs[j][i]=o[i].toString();
+			}
 		}
+		return aSongs;
 	}
-	return aSongs;
-}
+	
+	public void update(MemberDTO m){
+		boolean found = false;
+		for(int i = 0; i < lmFriends.size() && !found; i++){
+			if(lmFriends.getElementAt(i).getUser().equals(m.getUser())){
+				lmFriends.removeElementAt(i);
+				found = true;
+				break;
+			}
+		}
+		if(!found){
+			lmFriends.addElement(m);
+		}
+		lFriends.repaint();
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		try{
+			controller.logout();
+		} catch(Exception ex){
+			ex.printStackTrace();
+			System.exit(2);
+		}
+		
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
 
 }

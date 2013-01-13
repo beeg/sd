@@ -1499,3 +1499,12 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.core.resources 2 10035 2013-01-12 19:06:34.341
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-01-13 10:36:05.179 -----------------------------------------------
+eclipse.buildId=I20120502-2000
+java.version=1.7.0_10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-01-13 10:36:21.748
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
