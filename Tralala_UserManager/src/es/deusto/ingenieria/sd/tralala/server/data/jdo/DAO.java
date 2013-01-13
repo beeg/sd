@@ -1,6 +1,7 @@
 package es.deusto.ingenieria.sd.tralala.server.data.jdo;
 
 import javax.jdo.JDOHelper;
+import java.util.List;
 import javax.jdo.PersistenceManager;
 import javax.jdo.PersistenceManagerFactory;
 
@@ -72,6 +73,27 @@ public class DAO {
 		new MemberJDO().store(david);
 		new MemberJDO().store(aritz);
 		
+
+		/*Member rezo= new MemberJDO().getMembers().get(0);
+		rezo.getFavorites().add(new Song("a","a",1,1,"b","b","b"));
+		String lyrics = "The story behind the painting I drew is already told\nNo more tearstains on the pages of my diary\n" +
+					"Tired but unable to give up since I`m\n" + "Responsible for the lives I saved\n\n" + "The play is done\n" +
+"The curtain`s down\n\n" + "All the tales are told\n" + "All the orchids gone\n" +"Lost in my own world\n" +
+"Now I care for dead gardens\n\n" + "My song is little worth anymore\n" + "Time to lay this weary pen aside\n" +
+"The play is done\n" + "The curtain`s down\n\n"+ "Where are the wolves, the underwater moon\n" +" The elvenpath, the haven of youth\n" +
+"Lagoons of the starlit sea\n\n" + "Have I felt enough for one man`s deed?\n" + "Or is it time to challenge the Ancient of Days\n" + 
+"And let the virgin conceive\n" + "All the tales are told\n" + "All the orchids gone\n" +" All the tales are told\n" +
+"All the orchids gone\n" + "Lost in my own world\n" + "Now I care for dead gardens\n";
+		
+		rezo.getFavorites().add(new Song("Dead Gardens", "Nightwish", 428, 0, lyrics, "Once", "/home/song.wav"));
+		new MemberJDO().store(rezo);
+		System.out.println(new MemberJDO().getMembers().size());*/
+		List<Song> songs = new SongJDO().getSongByAlbum("b");
+		System.out.println("Canciones by album");
+		for(Song aux: songs)	{
+			System.out.println(aux);
+		}
+		System.out.println("Fin canciones by album");
 
 	}
 
