@@ -1,20 +1,13 @@
 package es.deusto.ingenieria.sd.tralala.server.data;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 public class CommonPayment extends Payment{
 	
-	public CommonPayment(Date date, int playNumber, PaymentMethod method){
-		this.date = date;
+	public CommonPayment(int playNumber, ArrayList<PaymentMethod> paymentMethods,String memberName){
 		this.playNumber = playNumber;
-		this.method = method;
+		this.paymentMethods=paymentMethods;
+		this.memberName=memberName;	
 	}
-
-	@Override
-	public double amountPaid() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-	
 	
 }

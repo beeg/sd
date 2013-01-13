@@ -1,20 +1,13 @@
 package es.deusto.ingenieria.sd.tralala.server.data;
 
-import java.util.Date;
+import java.util.List;
 
 public abstract class Payment {
 
-	Date date;
-	int playNumber;
-	PaymentMethod method;
-	
-	public Date getDate() {
-		return date;
-	}
-
-	public void setDate(Date date) {
-		this.date = date;
-	}
+	protected int playNumber;
+	protected double discount;
+	protected List<PaymentMethod> paymentMethods;
+	protected String memberName;
 
 	public int getPlayNumber() {
 		return playNumber;
@@ -24,13 +17,29 @@ public abstract class Payment {
 		this.playNumber = playNumber;
 	}
 
-	public PaymentMethod getMethod() {
-		return method;
+	public double getDiscount() {
+		return discount;
 	}
 
-	public void setMethod(PaymentMethod method) {
-		this.method = method;
+	public void setDiscount(double discount) {
+		this.discount = discount;
 	}
 
-	public abstract double amountPaid();
+	public List<PaymentMethod> getPaymentMethods() {
+		return paymentMethods;
+	}
+
+	public void setPaymentMethods(List<PaymentMethod> paymentMethods) {
+		this.paymentMethods = paymentMethods;
+	}
+
+	public String getMemberName() {
+		return memberName;
+	}
+
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+	
+	
 }

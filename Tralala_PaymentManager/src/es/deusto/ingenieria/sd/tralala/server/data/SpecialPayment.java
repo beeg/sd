@@ -1,18 +1,18 @@
 package es.deusto.ingenieria.sd.tralala.server.data;
 
-import java.util.Date;
+import java.util.ArrayList;
 
 public class SpecialPayment extends Payment{
 
 	double flatRate;
 	double percentage;
 	
-	public SpecialPayment(Date date, int playNumber, PaymentMethod method, double flatRate, double percentage){
-		this.date = date;
+	public SpecialPayment(int playNumber, ArrayList<PaymentMethod> paymentMethods, double flatRate, double percentage,double discount){
 		this.playNumber = playNumber;
-		this.method = method;
+		this.paymentMethods = paymentMethods;
 		this.flatRate = flatRate;
 		this.percentage = percentage;
+		this.discount=discount;
 	}
 
 	public double getFlatRate() {
@@ -31,11 +31,6 @@ public class SpecialPayment extends Payment{
 		this.percentage = percentage;
 	}
 
-	@Override
-	public double amountPaid() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
 	
 	
 }

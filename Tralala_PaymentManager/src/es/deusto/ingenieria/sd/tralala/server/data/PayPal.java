@@ -7,11 +7,11 @@ public class PayPal extends PaymentMethod{
 	String nick;
 	String pass;
 	
-	public PayPal(String nick, String pass) {
+	public PayPal(String nick, String pass, Payment payment) {
 		super();
 		this.nick = nick;
 		this.pass = pass;
-		this.payments = new ArrayList<Payment>();
+		this.payment = payment;
 	}
 
 	public String getNick() {

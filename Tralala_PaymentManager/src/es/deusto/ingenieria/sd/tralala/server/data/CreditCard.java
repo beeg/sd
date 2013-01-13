@@ -6,11 +6,11 @@ public class CreditCard extends PaymentMethod{
 
 	String number;
 	String ccv;
-	public CreditCard(String number, String ccv) {
+	public CreditCard(String number, String ccv,Payment payment) {
 		super();
 		this.number = number;
 		this.ccv = ccv;
-		this.payments = new ArrayList<Payment>();
+		this.payment = payment;
 	}
 	
 	public String getNumber() {
