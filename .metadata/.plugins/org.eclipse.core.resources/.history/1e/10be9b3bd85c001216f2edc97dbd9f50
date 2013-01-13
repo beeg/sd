@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE orm SYSTEM "file:/javax/jdo/orm.dtd">
+<orm>
+    <package name="es.deusto.ingenieria.sd.tralala.server.data">
+        <class name="Member">
+            <field name="login">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="password">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+            <field name="email">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+            <field name="descript">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+            <field name="points" persistence-modifier="persistent"> 
+                <column jdbc-type="INT"/> 
+			</field> 
+            <field name="contacts">
+            	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Member" dependent-element="true"/>
+                <join/>
+            </field>
+            <field name="favorites" >
+            	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
+                <join/>
+            </field>
+            <field name="permanents" >
+            	<collection element-type="es.deusto.ingenieria.sd.tralala.server.data.Song" dependent-element="true"/>
+                <join/>
+            </field>
+        </class>
+        <class name="Song">
+			<field name="title">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="artist">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+            <field name="duration" persistence-modifier="persistent"> 
+                <column jdbc-type="INT"/> 
+			</field> 
+			<field name="releaseDate" persistence-modifier="persistent"> 
+                <column jdbc-type="BIGINT"/> 
+			</field> 
+			<field name="lyrics">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+			<field name="album">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+            <field name="path">
+                <column length="32" jdbc-type="VARCHAR"/>
+            </field>
+  		</class>       
+  		 <class name="Play">
+  			<field name="member" persistence-modifier="persistent"></field>
+  			<field name="song" persistence-modifier="persistent"></field>
+            <field name="date" persistence-modifier="persistent"> 
+                <column jdbc-type="DATE"/> 
+			</field> 
+  		</class>  	
+    </package>
+</orm>

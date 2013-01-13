@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.rmi.Naming"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="es.deusto.ingenieria.sd.tralala.server.data.Member"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 <fullyQualifiedTypeName name="es.deusto.ingenieria.sd.tralala.server.data.dto.MemberAssembler"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="es.deusto.ingenieria.sd.tralala.server.data.Song"/>
 <fullyQualifiedTypeName name="es.deusto.ingenieria.sd.tralala.server.data.dto.SongAssembler"/>
-<fullyQualifiedTypeName name="es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO"/>
-<fullyQualifiedTypeName name="es.deusto.ingenieria.sd.tralala.server.data.Member"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.swing.JPanel"/>
 </qualifiedTypeNameHistroy>

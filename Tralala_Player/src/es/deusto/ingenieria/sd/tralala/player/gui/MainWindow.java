@@ -124,7 +124,8 @@ public class MainWindow extends JFrame implements ActionListener{
         //tSongs.setModel(tmSongs);
         sTable.setViewportView(tSongs);
         bPrevious.setText("<<");
-        bPlay.setIcon(new javax.swing.ImageIcon("foto\\play.png")); // NOI18N
+        bPlay.setIcon(new javax.swing.ImageIcon("foto/play.png")); // NOI18N
+
         bNext.setText(">>");
         bRecommendation.setText("Open Recommendation");
         bAccount.setText("Account");
@@ -312,6 +313,7 @@ public class MainWindow extends JFrame implements ActionListener{
 		                	"Name","Artist","Album","Duration","Release Date"
 		                }
 		            ));
+				sTable.setViewportView(tSongs);
 			} catch (Exception e){
 				e.printStackTrace();
 			}
@@ -330,6 +332,7 @@ public class MainWindow extends JFrame implements ActionListener{
 		                	"Name","Artist","Album","Duration","Release Date"
 		                }
 		            ));
+				sTable.setViewportView(tSongs);
 			} catch (Exception e){
 				e.printStackTrace();
 			}
@@ -342,20 +345,22 @@ public class MainWindow extends JFrame implements ActionListener{
 				sTable = new JScrollPane(tSongs);
 				tSongs.setModel(tmSongs);*/
 				tableContent=pasarLista(controller.getPermanents());
-				 tSongs.setModel(new javax.swing.table.DefaultTableModel(
+				tSongs.setModel(new javax.swing.table.DefaultTableModel(
 			                tableContent,
 			                new String [] {
 			                	"Name","Artist","Album","Duration","Release Date"
 			                }
 			            ));
+				sTable.setViewportView(tSongs);
 			} catch (Exception e){
 				e.printStackTrace();
 			}
 		} else if(source == bPlay){
 			try{
-				String lyrics = controller.play(tmSongs.getValueAt(tSongs.getSelectedRow(), 1).toString());
+				System.out.println(tSongs.getModel().getValueAt(tSongs.getSelectedRow(), 0));
+				String lyrics = controller.play(tSongs.getModel().getValueAt(tSongs.getSelectedRow(), 0).toString());
 				taLyrics = new JTextArea(lyrics);
-				sTable = new JScrollPane(taLyrics);
+				sTable.setViewportView(taLyrics);
 			} catch (Exception e){
 				e.printStackTrace();
 			}
@@ -368,9 +373,7 @@ String[][] pasarLista(List<SongDTO> songs)	{
 	for(int j =0;j<songs.size();j++)	{
 		Object[] o =songs.get(j).getFields();
 		for(int i=0;i<o.length;i++)	{
-			System.out.println(o[i].toString());
 			aSongs[j][i]=o[i].toString();
-			System.out.println(o[i].toString());
 		}
 	}
 	return aSongs;

@@ -92,6 +92,7 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 		try {
 			return SongAssembler.assembleFile(this.songManager.play(songTitle));
 		} catch (UnsupportedAudioFileException | IOException e) {
+			System.out.println(e.getMessage());
 			return null;
 		}
 	}

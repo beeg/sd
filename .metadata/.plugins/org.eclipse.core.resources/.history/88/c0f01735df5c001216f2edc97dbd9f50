@@ -1,0 +1,59 @@
+package es.deusto.ingenieria.sd.tralala.server.data.dto;
+
+import java.io.Serializable;
+
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioFormat.Encoding;
+
+public class SerializableEncoding implements Serializable {
+
+    /** ID to send over the network (serialized) */
+    private static final long serialVersionUID = 6710734978015728509L;
+
+    /** Specifies signed, linear PCM data. */
+    public static final SerializableEncoding PCM_SIGNED = new SerializableEncoding("PCM_SIGNED");
+
+    /** Specifies unsigned, linear PCM data. */
+    public static final SerializableEncoding PCM_UNSIGNED = new SerializableEncoding("PCM_UNSIGNED");
+
+    /** Specifies u-law encoded data. */
+    public static final SerializableEncoding ULAW = new SerializableEncoding("ULAW");
+
+    /** Specifies a-law encoded data. */
+    public static final SerializableEncoding ALAW = new SerializableEncoding("ALAW");
+
+    /** Encoding name. */
+    private String name;
+
+    /**
+     * Constructs a new encoding.
+     * 
+     * @param name
+     *          the name of the new type of encoding
+     */
+    public SerializableEncoding(String name) {
+      this.name = name;
+    }
+
+    /**
+     * @param encoding
+     *          The encoding
+     */
+    public SerializableEncoding(Encoding encoding) {
+      this.name = encoding.toString();
+    }
+
+    /**
+     * @return The encoding
+     */
+    public Encoding getEncoding() {
+      return new AudioFormat.Encoding(name);
+    }
+
+    /**
+     * @see java.lang.Object#toString()
+     */
+    public final String toString() {
+      return name;
+    }
+  }

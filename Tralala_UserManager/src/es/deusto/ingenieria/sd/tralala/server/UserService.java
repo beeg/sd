@@ -17,7 +17,7 @@ public class UserService {
 	
 	public Member login(String username, String password) {
 		Member tempMem = member.get(username);
-		
+		System.out.println(tempMem);
 		if(tempMem == null){
 			return null;
 		} else if(!tempMem.getPassword().equals(password)){
