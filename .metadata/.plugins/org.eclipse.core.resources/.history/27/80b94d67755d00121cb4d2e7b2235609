@@ -1,0 +1,89 @@
+package es.deusto.ingenieria.sd.tralala.player.controller;
+
+import java.rmi.RemoteException;
+import java.util.List;
+
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
+
+import es.deusto.ingenieria.sd.tralala.player.gui.MainWindow;
+import es.deusto.ingenieria.sd.tralala.player.observer.remote.UserRemoteObserver;
+import es.deusto.ingenieria.sd.tralala.player.remote.ServiceLocator;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.SongFileDTO;
+
+public class PlayerController {
+
+	private MemberDTO user;
+	private ServiceLocator sLocator;
+	private UserRemoteObserver usRo;
+	private SoundPlayer player;
+	private MainWindow gui;
+	
+	public PlayerController(String ip, String port, String serviceName){
+		sLocator = new ServiceLocator();
+		sLocator.setService(ip, port, serviceName);
+		System.out.println(sLocator.getService().getClass());
+		player = SoundPlayer.getInstance();
+		new MainWindow(this);
+	}
+	
+	public List<SongDTO> getSongs() throws RemoteException{
+		return sLocator.getService().getSongs();
+	}
+	
+	public boolean login(String username, String password) throws RemoteException{
+		user = sLocator.getService().login(username, password);
+		if(user != null)
+			usRo = new UserRemoteObserver(sLocator.getService(), this);
+		return (user != null);
+	}
+	
+	public List<SongDTO> getFavourites() throws RemoteException{
+		return sLocator.getService().getFavourites(user);
+	}
+	
+	public String play(SongDTO song) throws RemoteException{
+		SongFileDTO sourceFile = sLocator.getService().play(song);
+		System.out.println(sourceFile);
+		player.playSong(sourceFile.getData(), sourceFile.getFormat().getAudioFormat());
+		return sourceFile.getLyrics();
+	}
+	
+	public List<SongDTO> getPermanents() throws RemoteException{
+		return sLocator.getService().getPermanents(user);
+	}
+	
+	public List<MemberDTO> getFriends() throws RemoteException{
+		return sLocator.getService().getFriends(user);
+	}
+	
+	public void logout() throws RemoteException{
+		user = null;
+		sLocator.getService().deleteRemoteObserver(usRo);
+	}
+	
+	public static void main(String [] args){
+        try {
+        	for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+        		if ("Nimbus".equals(info.getName())) {
+        			UIManager.setLookAndFeel(info.getClassName());
+        			break;
+        		}
+        	}
+        } catch (Exception e){
+                
+        } finally {
+    		new PlayerController(args[0], args[1], args[2]);
+        }
+	}
+
+	public void notifyNewUser(MemberDTO tempM) {
+		gui.update(tempM);
+	}
+	
+	public MemberDTO getUser(){
+		return user;
+	}
+}

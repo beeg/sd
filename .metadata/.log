@@ -1763,6 +1763,17 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64
 
 !ENTRY org.eclipse.core.resources 2 10035 2013-01-12 19:06:34.341
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+<<<<<<< HEAD
+!SESSION 2013-01-13 10:36:05.179 -----------------------------------------------
+eclipse.buildId=I20120502-2000
+java.version=1.7.0_10
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-01-13 10:36:21.748
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+=======
 >>>>>>> 6153b6d14f91d3b94620e374250b9bc616f90204
 
 !ENTRY org.eclipse.jdt.ui 4 10001 2013-01-13 12:45:33.260
@@ -1929,6 +1940,7 @@ Java Model Exception: Java Model Status [Unknown javadoc format for System {key=
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1009 2013-01-13 12:57:16.841
 !MESSAGE Unknown javadoc format for System {key=Ljava/lang/System;} [in System.class [in java.lang [in C:\Program Files\Java\jre7\lib\rt.jar]]]
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.jdt.ui 4 10001 2013-01-13 13:25:36.490
 !MESSAGE Internal Error
@@ -3839,3 +3851,6 @@ Java Model Exception: Java Model Status [Unknown javadoc format for addComponent
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
 !SUBENTRY 1 org.eclipse.jdt.core 4 1009 2013-01-13 14:24:43.979
 !MESSAGE Unknown javadoc format for addComponent(java.awt.Component) {key=Ljavax/swing/GroupLayout$SequentialGroup;.addComponent(Ljava/awt/Component;)Ljavax/swing/GroupLayout$SequentialGroup;} [in SequentialGroup [in GroupLayout$SequentialGroup.class [in javax.swing [in C:\Program Files\Java\jre7\lib\rt.jar]]]]
+=======
+>>>>>>> 29ef0bb111587b81b89903f3cbcdd42db7709d18
+>>>>>>> 4a476aca57329c31809089e92636c345b443be77

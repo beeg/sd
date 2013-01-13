@@ -4,10 +4,12 @@ import java.rmi.RemoteException;
 
 import java.util.List;
 
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UIManager.LookAndFeelInfo;
 
 import es.deusto.ingenieria.sd.tralala.player.gui.MainWindow;
+import es.deusto.ingenieria.sd.tralala.player.observer.remote.UserRemoteObserver;
 import es.deusto.ingenieria.sd.tralala.player.remote.ServiceLocator;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
@@ -18,14 +20,16 @@ public class PlayerController {
 
 	private MemberDTO user;
 	private ServiceLocator sLocator;
+	private UserRemoteObserver usRo;
 	private SoundPlayer player;
+	private MainWindow gui;
 	
 	public PlayerController(String ip, String port, String serviceName){
 		sLocator = new ServiceLocator();
 		sLocator.setService(ip, port, serviceName);
 		System.out.println(sLocator.getService().getClass());
 		player = SoundPlayer.getInstance();
-		new MainWindow(this);
+		gui = new MainWindow(this);
 	}
 	
 	public List<SongDTO> getSongs() throws RemoteException{
@@ -36,31 +40,38 @@ public class PlayerController {
 		return sLocator.getService().findSongs(name);
 	}
 	
-	public boolean login(String username, String password) throws RemoteException{
+	public void login(String username, String password) throws RemoteException{
 		user = sLocator.getService().login(username, password);
-		return (user != null);
+		
+		if(user != null){
+			gui.changeToMain();
+			usRo = new UserRemoteObserver(sLocator.getService(), this);
+		} else {
+			JOptionPane.showMessageDialog(gui, "Your login data is incorrect.");
+		}
 	}
 	
 	public List<SongDTO> getFavourites() throws RemoteException{
-		return sLocator.getService().getFavourites(user.getUser());
+		return sLocator.getService().getFavourites(user);
 	}
 	
-	public String play(String songname) throws RemoteException{
-		SongFileDTO sourceFile = sLocator.getService().play(songname);
+	public String play(SongDTO song) throws RemoteException{
+		SongFileDTO sourceFile = sLocator.getService().play(song);
 		System.out.println(sourceFile);
 		player.playSong(sourceFile.getData(), sourceFile.getFormat().getAudioFormat());
 		return sourceFile.getLyrics();
 	}
 	
 	public List<SongDTO> getPermanents() throws RemoteException{
-		return sLocator.getService().getPermanents(user.getUser());
+		return sLocator.getService().getPermanents(user);
 	}
 	
 	public List<MemberDTO> getFriends() throws RemoteException{
-		return sLocator.getService().getFriends(user.getUser());
+		return sLocator.getService().getFriends(user);
 	}
 	
-	public void logout(){
+	public void logout() throws RemoteException{
+		usRo.end();		
 		user = null;
 	}
 	
@@ -82,5 +93,13 @@ public class PlayerController {
         } finally {
     		new PlayerController(args[0], args[1], args[2]);
         }
+	}
+
+	public void notifyNewUser(MemberDTO tempM) {
+		gui.update(tempM);
+	}
+	
+	public MemberDTO getUser(){
+		return user;
 	}
 }

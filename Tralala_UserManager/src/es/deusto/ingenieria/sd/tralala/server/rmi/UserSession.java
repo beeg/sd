@@ -12,63 +12,58 @@ import es.deusto.ingenieria.sd.tralala.server.SongByArtist;
 import es.deusto.ingenieria.sd.tralala.server.SongByTitle;
 import es.deusto.ingenieria.sd.tralala.server.SongService;
 import es.deusto.ingenieria.sd.tralala.server.UserService;
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Recommendation;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberAssembler;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.RecommendationDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongAssembler;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongDTO;
 import es.deusto.ingenieria.sd.tralala.server.data.dto.SongFileDTO;
+import es.deusto.ingenieria.sd.tralala.server.data.jdo.MemberJDO;
+import es.deusto.ingenieria.sd.tralala.server.remote.observer.UserRemoteObservable;
+import es.deusto.ingenieria.sd.util.observer.remote.IRemoteObserver;
 
 public class UserSession extends UnicastRemoteObject implements IUserSession{
 
 	private SongService songManager;
 	private UserService userManager;
+	private UserRemoteObservable usRo;
 	private static final long serialVersionUID = 1L;
 
 	public UserSession() throws RemoteException {
 		super();
 		userManager = new UserService();
 		songManager = new SongService();
+		usRo = new UserRemoteObservable();
 	}
 
 	@Override
-	public void sendRecommendation(String user, String friend, String songName) throws RemoteException{
-		// TODO Auto-generated method stub
-		//userManager.sendRecommendation(main, receiver, song);
+	public void sendRecommendation(MemberDTO user, MemberDTO friend, SongDTO song) throws RemoteException{
 	}
 
 	@Override
-	public void rejectRecommendation(String user, Recommendation recommendation) throws RemoteException{
-		// TODO Auto-generated method stub
-		//userManager.rejectRecommendation(main, recommendation);
+	public void rejectRecommendation(MemberDTO user, RecommendationDTO recommendation) throws RemoteException{
 	}
 
 	@Override
-	public void acceptRecommendation(String user, Recommendation recommendation) throws RemoteException{
-		// TODO Auto-generated method stub
-		//userManager.acceptRecommendation(main, recommendation);
+	public void acceptRecommendation(MemberDTO user, RecommendationDTO recommendation) throws RemoteException{
 	}
 	
 	@Override
-	public void getRecommendations(String user) throws RemoteException{
-		// TODO Auto-generated method stub
-		//userManager.getRecommendations(main);
+	public void getRecommendations(MemberDTO user) throws RemoteException{
 	}
 
 	@Override
-	public void addFriend(String user, String friend) throws RemoteException{
-		// TODO Auto-generated method stub
-		//userManager.addFriend(main, friend);
+	public void addFriend(MemberDTO user, MemberDTO friend) throws RemoteException{
 	}
 
 	@Override
-	public void removeFriend(String user, String friend) throws RemoteException{
-		// TODO Auto-generated method stub
-		//userManager.removeFriend(main, friend);
+	public void removeFriend(MemberDTO user, MemberDTO friend) throws RemoteException{
 	}
 
 	@Override
-	public void acceptFriend(String user, String friend) throws RemoteException{
+	public void acceptFriend(MemberDTO user, MemberDTO friend) throws RemoteException{
 		// TODO Auto-generated method stub
 		//userManager.acceptFriend(main, friend);
 	}
@@ -80,20 +75,20 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public List<MemberDTO> getFriends(String user) throws RemoteException{
+	public List<MemberDTO> getFriends(MemberDTO user) throws RemoteException{
 		// TODO Auto-generated method stub
-		return MemberAssembler.assemble(userManager.getFriends(user));
+		return MemberAssembler.assemble(userManager.getFriends(user.getUser()));
 	}
 
 	@Override
-	public MemberDTO login(String username, String password) throws RemoteException{		
+	public MemberDTO login(String username, String password) throws RemoteException{	
 		return MemberAssembler.assemble(userManager.login(username, password));
 	}
 
 	@Override
-	public SongFileDTO play(String songTitle) throws RemoteException{
+	public SongFileDTO play(SongDTO song) throws RemoteException{
 		try {
-			return SongAssembler.assembleFile(this.songManager.play(songTitle));
+			return SongAssembler.assembleFile(this.songManager.play(song.getTitle()));
 		} catch (UnsupportedAudioFileException | IOException e) {
 			System.out.println(e.getMessage());
 			return null;
@@ -101,15 +96,15 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public List<SongDTO> getFavourites(String user) throws RemoteException{
+	public List<SongDTO> getFavourites(MemberDTO user) throws RemoteException{
 		// TODO Auto-generated method stub
-		return SongAssembler.assemble(songManager.getFavourites(user));
+		return SongAssembler.assemble(songManager.getFavourites(user.getUser()));
 	}
 
 	@Override
-	public List<SongDTO> getPermanents(String user) throws RemoteException{
+	public List<SongDTO> getPermanents(MemberDTO user) throws RemoteException{
 		// TODO Auto-generated method stub
-		return SongAssembler.assemble(songManager.getPermanents(user));
+		return SongAssembler.assemble(songManager.getPermanents(user.getUser()));
 	}
 
 	@Override
@@ -125,16 +120,16 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public void addFavourite(String user, String song) throws RemoteException{
+	public void addFavourite(MemberDTO user, SongDTO song) throws RemoteException{
 		// TODO Auto-generated method stub
-		this.userManager.addFavourite(user, song);
+		this.userManager.addFavourite(user.getUser(), song.getTitle());
 		
 	}
 
 	@Override
-	public void removeFavourite(String user, String song) throws RemoteException{
+	public void removeFavourite(MemberDTO user, SongDTO song) throws RemoteException{
 		// TODO Auto-generated method stub
-		this.userManager.removeFavourite(user, song);
+		this.userManager.removeFavourite(user.getUser(), song.getTitle());
 	}
 
 	@Override
@@ -156,21 +151,32 @@ public class UserSession extends UnicastRemoteObject implements IUserSession{
 	}
 
 	@Override
-	public void getPayments(String user) throws RemoteException{
+	public void getPayments(MemberDTO user) throws RemoteException{
 		// TODO Auto-generated method stub
-		this.userManager.getPayments(user);
+		this.userManager.getPayments(user.getUser());
 	}
 
 	@Override
-	public void getCurrentPayment(String user) throws RemoteException{
+	public void getCurrentPayment(MemberDTO user) throws RemoteException{
 		// TODO Auto-generated method stub
-		this.userManager.getCurrentPayment(user);
+		this.userManager.getCurrentPayment(user.getUser());
 	}
 
 	@Override
-	public void logout(String user) throws RemoteException{
-		// TODO Auto-generated method stub
-		this.userManager.logout(user);
+	public void logout(MemberDTO user) throws RemoteException{
+		this.userManager.logout(user.getUser());
+	}
+
+
+	@Override
+	public void addRemoteObserver(MemberDTO m, IRemoteObserver arg0) throws RemoteException {
+		usRo.addRemoteObserver(new MemberJDO().get(m.getUser()), arg0);
+	}
+
+	@Override
+	public void deleteRemoteObserver(MemberDTO m)
+			throws RemoteException {
+		usRo.deleteRemoteObserver(new MemberJDO().get(m.getUser()));
 	}
 	
 	public void setStrategy(String strategy) throws RemoteException	{

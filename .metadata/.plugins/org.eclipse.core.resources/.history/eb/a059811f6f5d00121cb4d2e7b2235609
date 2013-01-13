@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="" name="Tralala_UserManager">    
+    <!-- project directories -->
+    <property name="src.dir" location="src"/>
+    <property name="bin.dir" location="bin"/>
+	<property name="lib.dir" location="lib"/>
+	<property name="server.port" value="1099"/> 
+	<property name="server.IP" value="127.0.0.1"/>
+	<property name="server.Name" value="UserManager"/>
+	<property name="export.file" value="helloServer.jar"/>
+	<property name="policy.file" location="security/java.policy"/>	
+
+	
+	<target name="help">
+		<echo>Usage: ant [build | export | server]</echo>
+	</target>
+	
+	   <!-- Classpath -->
+	    <path id="classpath">
+	        <fileset dir="${lib.dir}">
+	            <include name="**/*.jar"/>
+	        </fileset>
+	        <pathelement location="${bin.dir}"/>
+	        <pathelement location="${conf.dir}"/>
+	    </path>
+	
+	<target name="build" description="Builds the project">
+		<delete dir="${bin.dir}"/>
+		<mkdir dir="${bin.dir}"/>
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="classpath" deprecation="true" fork="true" includeAntRuntime="no"/>
+    </target>
+    
+	<target name="client" description="Runs the Client">
+		<java classname="es.deusto.ingenieria.sd.tralala.player.controller.PlayerController" classpathref="classpath" fork="true">
+        	<jvmarg value="-Djava.rmi.server.codebase=file:${bin.dir}/"/>
+			<jvmarg value="-Djava.security.policy=${policy.file}"/>			
+        	<arg value="${server.IP}"/> 
+	 		<arg value="${server.port}"/> 
+			<arg value="${server.Name}"/> 
+        </java>
+    </target>
+
+    <!-- TARGET : clean -->
+    <target name="clean">
+        <delete includeEmptyDirs="true" quiet="true">
+            <fileset dir="${bin.dir}" includes="**/*.*"/>
+        </delete>
+		<delete dir="${bin.dir}"/>
+    </target>
+
+    <!-- TARGET : prepare -->
+    <target name="prepare">
+        <mkdir dir="${bin.dir}"/>
+    </target>
+
+    <!-- TARGET : compile -->
+    <target name="compile" depends="clean, prepare">
+        <javac srcdir="${src.dir}" destdir="${bin.dir}" classpathref="classpath" includeantruntime="no">
+            <include name="**/*.java"/>
+        </javac>
+    </target>
+
+</project>

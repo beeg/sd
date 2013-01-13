@@ -1,0 +1,53 @@
+package es.deusto.ingenieria.sd.tralala.server.remote.observer;
+
+import java.rmi.RemoteException;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map.Entry;
+
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberAssembler;
+import es.deusto.ingenieria.sd.tralala.server.data.dto.MemberDTO;
+import es.deusto.ingenieria.sd.util.observer.remote.IRemoteObserver;
+import es.deusto.ingenieria.sd.util.observer.remote.RemoteObservable;
+
+public class UserRemoteObservable extends RemoteObservable{
+	
+	private HashMap<Member, IRemoteObserver>usersMap = null;
+	
+	public UserRemoteObservable(){
+		super();
+		usersMap = new HashMap<Member, IRemoteObserver>();
+	}
+	
+	/**
+	 * We notify only to our friends.
+	 * @param m
+	 * @param ob
+	 * @throws RemoteException
+	 */
+	public void notifyFriendsRemoteObservers(Member m, MemberDTO dto)throws RemoteException{
+		List<Member> l = m.getContacts();
+		Iterator<Member> it = l.iterator();
+		
+	    while (it.hasNext()) {
+	        Member tempM = (Member)it.next();
+	        System.out.println(tempM.getLogin());
+	        if(usersMap.containsKey(tempM)){
+	        	usersMap.get(m).update(MemberAssembler.assemble(tempM));
+	        	usersMap.get(tempM).update(dto);
+	        }
+	    }
+	}
+
+	public void addRemoteObserver(Member m, IRemoteObserver ob) throws RemoteException{
+		usersMap.put(m, ob);
+		notifyFriendsRemoteObservers(m, MemberAssembler.assemble(m));
+	}
+	
+	public void deleteRemoteObserver(Member m) throws RemoteException{
+		notifyFriendsRemoteObservers(m, MemberAssembler.assemble(m));
+		usersMap.remove(m);
+	}
+}

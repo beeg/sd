@@ -10,7 +10,12 @@ import es.deusto.ingenieria.sd.tralala.server.data.dto.PaymentMethodDTO;
 
 public class UserExpend extends UnicastRemoteObject implements IUserExpend{
 
-	protected UserExpend() throws RemoteException {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5012655950947153450L;
+
+	public UserExpend() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
