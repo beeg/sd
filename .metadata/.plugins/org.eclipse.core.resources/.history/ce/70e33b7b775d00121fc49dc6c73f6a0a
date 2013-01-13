@@ -1,10 +1,15 @@
 package es.deusto.ingenieria.sd.tralala.server.data.jdo;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.HashSet;
+
+import java.util.List;
+
 import javax.jdo.PersistenceManager;
 import javax.jdo.Query;
 import javax.jdo.Transaction;
+
+import es.deusto.ingenieria.sd.tralala.server.data.Member;
 import es.deusto.ingenieria.sd.tralala.server.data.Song;
 
 
@@ -38,37 +43,6 @@ public class SongJDO {
 		tx.commit();
 		
 		return tempSong;
-	}
-	
-	public List<Song> getSongByArtist(String name){
-		Transaction tx = pm.currentTransaction();
-		tx.begin();
-		List<Song> aux = new ArrayList<Song> ();
-		Query q = pm.newQuery("SELECT FROM " + Song.class.getName());
-		@SuppressWarnings("unchecked")
-		List<Song> songs = (List<Song>)q.execute();
-		tx.commit();
-		for(Song s: songs)	{
-		  if(s.getArtist().equals(name))	{
-				  aux.add(s);
-		  }
-		}
-		return aux; 
-	}
-	
-	public List<Song> getSongByAlbum(String name){
-		Transaction tx = pm.currentTransaction();
-		tx.begin();
-		List<Song> aux = new ArrayList<Song> ();
-		Query q = pm.newQuery("SELECT FROM " + Song.class.getName());
-		List<Song> songs = (List<Song>)q.execute();
-		tx.commit();
-		for(Song s: songs)	{
-		  if(s.getAlbum().equals(name))	{
-				  aux.add(s);
-		  }
-		}
-		return aux;
 	}
 	
 	public List<Song> getSongs(){

@@ -43,9 +43,15 @@ public class SongJDO {
 	public List<Song> getSongByArtist(String name){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
-		List<Song> aux = new ArrayList<Song> ();
+		Query query = pm.newQuery("SELECT FROM " + Song.class.getName() + " WHERE ARTIST == '" + name + "'");
+		List<Song> tempSong = (List<Song>)query.execute();
+		tx.commit();
+		/*
+		 * El otro dia dio problemas con el where. 
+		 * Si no funciona, comentar las tres lineas de encima y descomentar esto:
+		 */
+		/*List<Song> aux = new ArrayList<Song> ();
 		Query q = pm.newQuery("SELECT FROM " + Song.class.getName());
-		@SuppressWarnings("unchecked")
 		List<Song> songs = (List<Song>)q.execute();
 		tx.commit();
 		for(Song s: songs)	{
@@ -53,13 +59,22 @@ public class SongJDO {
 				  aux.add(s);
 		  }
 		}
-		return aux; 
+		return aux; */
+		
+		return tempSong;
 	}
 	
 	public List<Song> getSongByAlbum(String name){
 		Transaction tx = pm.currentTransaction();
 		tx.begin();
-		List<Song> aux = new ArrayList<Song> ();
+		Query query = pm.newQuery("SELECT FROM " + Song.class.getName() + " WHERE ALBUM == '" + name + "'");
+		List<Song> tempSong = (List<Song>)query.execute();
+		tx.commit();
+		/*
+		 * El otro dia dio problemas con el where. 
+		 * Si no funciona, comentar las tres lineas de encima y descomentar esto:
+		 */
+		/*List<Song> aux = new ArrayList<Song> ();
 		Query q = pm.newQuery("SELECT FROM " + Song.class.getName());
 		List<Song> songs = (List<Song>)q.execute();
 		tx.commit();
@@ -68,7 +83,8 @@ public class SongJDO {
 				  aux.add(s);
 		  }
 		}
-		return aux;
+		return aux; */
+		return tempSong;
 	}
 	
 	public List<Song> getSongs(){

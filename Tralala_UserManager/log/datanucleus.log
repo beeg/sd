@@ -1526,3 +1526,93 @@ org.datanucleus.store.exceptions.NoTableManagedException: Persistent class "es.d
 18:50:48,310 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@3994b855
 18:50:48,310 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@124d0242
 18:50:48,310 (RMI TCP Connection(10)-127.0.0.1) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@3994b855
+12:57:51,433 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+12:57:51,892 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+12:57:53,137 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Member.class" with enhanced definition
+12:57:53,145 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Play.class" with enhanced definition
+12:57:53,155 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Song.class" with enhanced definition
+12:57:53,156 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=1026 ms, enhance=235 ms, total=1261 ms. Consult the log for full details
+12:57:59,727 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+12:57:59,746 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+12:58:00,281 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@acebb0
+12:58:00,282 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@173f769
+12:58:00,282 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@acebb0
+12:58:00,282 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@173f769
+12:58:00,299 (main) INFO  [DataNucleus.JDO] - Exception thrown
+Variable ARTIST is unbound and cannot be determined
+org.datanucleus.exceptions.NucleusUserException: Variable ARTIST is unbound and cannot be determined
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.processUnboundExpression(QueryToSQLMapper.java:3342)
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.processEqExpression(QueryToSQLMapper.java:1605)
+	at org.datanucleus.query.evaluator.AbstractExpressionEvaluator.compileRelationalExpression(AbstractExpressionEvaluator.java:77)
+	at org.datanucleus.query.evaluator.AbstractExpressionEvaluator.compileOrAndExpression(AbstractExpressionEvaluator.java:65)
+	at org.datanucleus.query.evaluator.AbstractExpressionEvaluator.evaluate(AbstractExpressionEvaluator.java:46)
+	at org.datanucleus.query.expression.Expression.evaluate(Expression.java:337)
+	at org.datanucleus.query.expression.DyadicExpression.evaluate(DyadicExpression.java:73)
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.compileFilter(QueryToSQLMapper.java:461)
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.compile(QueryToSQLMapper.java:381)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:883)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.SongJDO.getSongByArtist(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.DAO.main(Unknown Source)
+12:58:48,178 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+12:58:48,391 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+12:58:48,887 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Member.class" with enhanced definition
+12:58:48,894 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Play.class" with enhanced definition
+12:58:48,902 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Song.class" with enhanced definition
+12:58:48,904 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=405 ms, enhance=106 ms, total=511 ms. Consult the log for full details
+12:58:57,136 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+12:58:57,154 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+12:58:57,668 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@1ca2026
+12:58:57,669 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@536490
+12:58:57,669 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@1ca2026
+12:58:57,669 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@536490
+12:58:57,680 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@17d3b4
+12:58:57,680 (main) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+12:58:57,683 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@536490
+12:58:57,683 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@17d3b4
+12:58:57,683 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@536490
+12:59:46,998 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+12:59:47,184 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+12:59:47,626 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Member.class" with enhanced definition
+12:59:47,632 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Play.class" with enhanced definition
+12:59:47,638 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Song.class" with enhanced definition
+12:59:47,640 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=361 ms, enhance=93 ms, total=454 ms. Consult the log for full details
+12:59:53,298 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+12:59:53,317 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+12:59:53,611 (main) INFO  [DataNucleus.JDO] - Exception thrown
+Variable ALBUM is unbound and cannot be determined
+org.datanucleus.exceptions.NucleusUserException: Variable ALBUM is unbound and cannot be determined
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.processUnboundExpression(QueryToSQLMapper.java:3342)
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.processEqExpression(QueryToSQLMapper.java:1605)
+	at org.datanucleus.query.evaluator.AbstractExpressionEvaluator.compileRelationalExpression(AbstractExpressionEvaluator.java:77)
+	at org.datanucleus.query.evaluator.AbstractExpressionEvaluator.compileOrAndExpression(AbstractExpressionEvaluator.java:65)
+	at org.datanucleus.query.evaluator.AbstractExpressionEvaluator.evaluate(AbstractExpressionEvaluator.java:46)
+	at org.datanucleus.query.expression.Expression.evaluate(Expression.java:337)
+	at org.datanucleus.query.expression.DyadicExpression.evaluate(DyadicExpression.java:73)
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.compileFilter(QueryToSQLMapper.java:461)
+	at org.datanucleus.store.rdbms.query.QueryToSQLMapper.compile(QueryToSQLMapper.java:381)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileQueryFull(JDOQLQuery.java:883)
+	at org.datanucleus.store.rdbms.query.JDOQLQuery.compileInternal(JDOQLQuery.java:343)
+	at org.datanucleus.store.query.Query.executeQuery(Query.java:1747)
+	at org.datanucleus.store.query.Query.executeWithArray(Query.java:1666)
+	at org.datanucleus.store.query.Query.execute(Query.java:1639)
+	at org.datanucleus.api.jdo.JDOQuery.execute(JDOQuery.java:221)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.SongJDO.getSongByAlbum(Unknown Source)
+	at es.deusto.ingenieria.sd.tralala.server.data.jdo.DAO.main(Unknown Source)
+13:00:26,829 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer for API "JDO"
+13:00:27,045 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (version 3.1.0.release) : Enhancement of classes
+13:00:27,548 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Member.class" with enhanced definition
+13:00:27,555 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Play.class" with enhanced definition
+13:00:27,562 (main) INFO  [DataNucleus.Enhancer] - Writing class file "C:\Users\Bego\workspacePSD\Tralala_UserManager\bin\es\deusto\ingenieria\sd\tralala\server\data\Song.class" with enhanced definition
+13:00:27,563 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer completed with success for 3 classes. Timings : input=420 ms, enhance=96 ms, total=516 ms. Consult the log for full details
+13:00:35,670 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+13:00:35,689 (main) WARN  [DataNucleus.MetaData] - Metadata has jdbc-type of INT yet this is not valid. Ignored
+13:00:36,070 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.store.connection.ConnectionManagerImpl$2@66ab9c
+13:00:36,071 (main) INFO  [DataNucleus.Query] - Leyendo los resultados del query "SELECT FROM es.deusto.ingenieria.sd.tralala.server.data.Song" como la conneccion va a cerrar
+13:00:36,174 (main) INFO  [DataNucleus.General] - >> calling preCommit on org.datanucleus.ObjectManagerImpl@78114b
+13:00:36,175 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.store.connection.ConnectionManagerImpl$2@66ab9c
+13:00:36,175 (main) INFO  [DataNucleus.General] - >> calling preFlush on org.datanucleus.ObjectManagerImpl@78114b

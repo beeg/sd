@@ -47,12 +47,14 @@ public class DAO {
 		rezo.getFavorites().add(new Song("Dead Gardens", "Nightwish", 428, 0, lyrics, "Once", "/home/song.wav"));
 		new MemberJDO().store(rezo);
 		System.out.println(new MemberJDO().getMembers().size());*/
-		List<Song> songs = new SongJDO().getSongByAlbum("b");
-		System.out.println("Canciones by album");
+		Song s = new SongJDO().get("a");
+		System.out.println("Cancion a: "+s);
+		List<Song> songs = new SongJDO().getSongByArtist("a");
+		System.out.println("Canciones by artist");
 		for(Song aux: songs)	{
 			System.out.println(aux);
 		}
-		System.out.println("Fin canciones by album");
+		System.out.println("Fin canciones by artist");
 	}
 
 }
